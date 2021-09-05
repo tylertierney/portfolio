@@ -6,7 +6,7 @@ import ThemeSwitch from "./ThemeSwitch/ThemeSwitch";
 import Hamburger from "./Hamburger Icon/Hamburger";
 import Navmenu from "./Navmenu/Navmenu";
 
-const Navbar = () => {
+const Navbar = ({ handleScroll }) => {
   const { theme } = useContext(ThemeContext);
 
   const [isNavmenuShowing, setNavmenuShowing] = useState(false);
@@ -33,7 +33,7 @@ const Navbar = () => {
             : "navmenuContainer slideaway"
         }
       >
-        <Navmenu />
+        <Navmenu handleScroll={handleScroll} />
       </div>
       <Hamburger
         isNavmenuShowing={isNavmenuShowing}

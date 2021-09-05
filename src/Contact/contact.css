@@ -1,0 +1,16 @@
+.contactHeader {
+  font-family: "Encode Sans SC", sans-serif;
+  font-size: 3rem;
+  border-bottom: 7px solid rgba(255, 210, 190, 1);
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.contactContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 4px solid;
+}

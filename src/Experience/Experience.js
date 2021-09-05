@@ -7,12 +7,12 @@ import ExperienceItem from "./ExperienceItem/ExperienceItem";
 const Experience = () => {
   const { theme } = useContext(ThemeContext);
 
-  const experienceItemArray = data.experienceItems.map((item) => {
-    return <ExperienceItem item={item} />;
+  const experienceItemArray = data.experienceItems.map((item, index) => {
+    return <ExperienceItem key={index} item={item} />;
   });
 
-  const educationItemArray = data.educationItems.map((item) => {
-    return <ExperienceItem item={item} />;
+  const educationItemArray = data.educationItems.map((item, index) => {
+    return <ExperienceItem key={index} item={item} />;
   });
 
   return (

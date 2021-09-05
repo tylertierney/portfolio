@@ -8,7 +8,7 @@ import { VStack } from "@chakra-ui/react";
 const Projects = () => {
   const { theme } = useContext(ThemeContext);
 
-  const projectItemsArray = data.projects.map((item) => {
+  const projectItemsArray = data.projects.map((item, index) => {
     const {
       title,
       description,
@@ -21,6 +21,7 @@ const Projects = () => {
     } = item;
     return (
       <ProjectItem
+        key={index}
         title={title}
         description={description}
         hostedsite={hostedsite}

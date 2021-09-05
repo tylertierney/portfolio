@@ -16,9 +16,13 @@ const ExperienceItem = ({ item }) => {
     school,
   } = item;
 
-  const bulletsArray = bullets.map((bullet) => {
+  const bulletsArray = bullets.map((bullet, index) => {
     if (bullet !== "") {
-      return <li style={{ padding: "0 0 0.8rem 0" }}>{bullet}</li>;
+      return (
+        <li key={index} style={{ padding: "0 0 0.8rem 0" }}>
+          {bullet}
+        </li>
+      );
     } else {
       return null;
     }

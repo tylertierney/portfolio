@@ -110,10 +110,9 @@ const ProjectItem = ({
         <Flex direction="column" mr="20px" minW="200px">
           <Heading mb="10px">Tech Stack</Heading>
           <List spacing={3} p="0">
-            {tech_stack.map((item) => {
-              console.log(item);
+            {tech_stack.map((item, index) => {
               return (
-                <ListItem>
+                <ListItem key={index}>
                   {convertIconNametoIcon(item.icon)}
                   {item.name}
                 </ListItem>

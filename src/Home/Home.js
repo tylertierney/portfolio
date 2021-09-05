@@ -6,8 +6,6 @@ import resume from "../tierneyresume_21.pdf";
 const Home = () => {
   const { theme } = useContext(ThemeContext);
 
-  console.log(resume);
-
   return (
     <section className="home" style={{ backgroundColor: theme.blueBackground }}>
       <div className="homeContainer">
