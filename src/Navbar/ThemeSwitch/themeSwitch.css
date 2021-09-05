@@ -1,0 +1,41 @@
+.themeSwitch {
+  height: 100%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.themeBtn {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  box-shadow: -1px 3px 5px 0px #3d363673;
+  outline: none;
+  background-color: #ffd2be;
+}
+
+.themeToggleRight {
+  left: 15px;
+}
+
+.themeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.themeTrack {
+  border-radius: 25%/50%;
+  width: 30px;
+  height: 15px;
+  cursor: pointer;
+  border-width: 1px;
+}

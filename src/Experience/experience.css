@@ -1,0 +1,48 @@
+.experienceContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 4px solid;
+}
+
+.contactCTA {
+  position: absolute;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+  background-color: whitesmoke;
+  border: 2px solid;
+  padding: 5px 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactCTAborder {
+  height: 3px;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+}
+
+.experienceHeader {
+  font-family: "Encode Sans SC", sans-serif;
+  font-size: 3rem;
+  border-bottom: 7px solid rgba(255, 210, 190, 1);
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.experienceHeader:last-child {
+  margin-top: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .contactCTA {
+    font-size: 1rem;
+  }
+}

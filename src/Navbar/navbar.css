@@ -1,0 +1,87 @@
+.navbarContainer {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+
+  top: 0vh;
+  z-index: 2;
+}
+
+.logoAndThemeSwitch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-width: 20vw;
+  padding: 0 0 0 15px;
+}
+
+@keyframes slideaway {
+  from {
+    transform: translate(0);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-200px);
+    opacity: 0;
+  }
+}
+
+.logoAndThemeSwitch.slideaway {
+  animation-name: slideaway;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.logoAndThemeSwitch.slidein {
+  animation-name: slidein;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate(-200px);
+  }
+  to {
+    transform: translate(0px);
+  }
+}
+
+.navmenuContainer {
+  height: 100%;
+  width: 80vw;
+  max-width: 80vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  color: whitesmoke;
+}
+
+.navmenuContainer.slidein {
+  animation-name: slidein;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.navmenuContainer.slideaway {
+  animation-name: slideaway;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .navmenuContainer {
+    justify-content: flex-start;
+  }
+}

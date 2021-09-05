@@ -1,0 +1,21 @@
+.menuItem {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transition: 0.3s ease-in-out;
+  padding: 0 40px;
+}
+
+.menuItem:hover {
+  background-color: whitesmoke;
+  color: rgb(39, 37, 37);
+}
+
+@media only screen and (max-width: 600px) {
+  .menuItem {
+    padding: 0 10px;
+    font-size: 0.95rem;
+  }
+}
