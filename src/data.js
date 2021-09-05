@@ -198,7 +198,7 @@ const data = {
         "This eCommerce project was one of my first React applications. Functionality is limited as there are no database connections; this site was simply an opportunity to explore React hooks and develop a frontend.",
       hostedsite: "https://tylertierney.github.io/eCommerce/",
       github: "https://github.com/tylertierney/eCommerce",
-      desktop_screenshot: "assets/images/ecommerce_desktop.jpg",
+      desktop_screenshot: "assets/images/ecommerce_desktop.png",
       mobile_screenshot: "assets/images/ecommerce_mobile.jpg",
       mobile_screenshot2: "assets/images/ecommerce_mobile2.jpg",
       tech_stack: [
