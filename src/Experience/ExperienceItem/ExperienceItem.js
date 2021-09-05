@@ -14,12 +14,13 @@ const ExperienceItem = ({ item }) => {
     bullets,
     image,
     school,
-    degree,
   } = item;
 
   const bulletsArray = bullets.map((bullet) => {
     if (bullet !== "") {
       return <li style={{ padding: "0 0 0.8rem 0" }}>{bullet}</li>;
+    } else {
+      return null;
     }
   });
 
@@ -44,7 +45,15 @@ const ExperienceItem = ({ item }) => {
       ></div>
       <span className="dates enddate">{enddate}</span>
       <span className="dates startdate">{startdate}</span>
-      {image ? <img className="educationImg" src={uflogo}></img> : <></>}
+      {image ? (
+        <img
+          alt="University of Florida logo"
+          className="educationImg"
+          src={uflogo}
+        ></img>
+      ) : (
+        <></>
+      )}
 
       <h1 className="position" style={{ color: theme.aboutHeaderUnderline }}>
         {position}
@@ -60,7 +69,6 @@ const ExperienceItem = ({ item }) => {
           <i>{location}</i>
         </span>
       </div>
-      {/* {degree ? <span className="company">{degree}</span> : <></>} */}
       <ul className="bulletPointList">{bulletsArray}</ul>
     </div>
   );

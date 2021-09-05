@@ -38,9 +38,6 @@ const ProjectItem = ({
   mobile_screenshot2,
   tech_stack,
 }) => {
-  const something = String(process.env.PUBLIC_URL) + "hello";
-  console.log(something);
-
   const { theme } = useContext(ThemeContext);
 
   const convertIconNametoIcon = (icon_name) => {

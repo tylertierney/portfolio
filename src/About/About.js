@@ -36,16 +36,8 @@ const About = () => {
           fortunate enough to serve as a trusted advisor to businesses
           navigating complex real estate challenges during a period of
           significant global change.
-          {/* At Avocat, we are disrupting the
-        traditional CRE model by providing data-driven solutions and
-        consultative oversight of projects from start-to-finish. */}
         </Text>
-        {/* <p className="aboutParagraphs" style={{ color: theme.text }}>
-        It comes as no surprise that recent global events have shifted the needs
-        of corporate real estate across all verticals. Thus, it has been
-        uniquely exciting to serve as a trusted advisor to those firms seeking
-        guidance in a rapidly-changing business environment.
-      </p> */}
+
         <Text className="aboutParagraphs" style={{ color: theme.text }}>
           In early 2021 I decided to pursue a growing interest of mine - web
           development.
@@ -61,6 +53,7 @@ const About = () => {
         </Text>
         <div>
           <img
+            alt="Tyler next to a gator statue at UF"
             src={gatorpic}
             style={{ height: "200px", width: "auto" }}
             className="gatorPic"
