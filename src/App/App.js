@@ -43,8 +43,6 @@ function App() {
     }
   };
 
-  // handleScroll("about");
-
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       <div ref={homeRef}>
