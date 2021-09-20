@@ -1,0 +1,45 @@
+import {
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  MenuDivider,
+  Text,
+  Flex,
+} from "@chakra-ui/react";
+
+const MenuComponent = ({ menuName, menuIcon, menuItems }) => {
+  console.log(menuIcon);
+
+  const menuItemArray = menuItems.map((item, index) => {
+    return (
+      <MenuItem key={index} onClick={item.onclick}>
+        {item.icon}
+        <Text ml="10px">{item.text}</Text>
+      </MenuItem>
+    );
+  });
+
+  return (
+    <Menu>
+      {({ isOpen }) => (
+        <>
+          <MenuButton
+            userSelect="none"
+            as={Flex}
+            cursor="pointer"
+            flexDirection="row"
+          >
+            <Text color="brand.text.dark" fontSize="1rem">
+              {menuName}
+              {isOpen ? menuIcon[1] : menuIcon[0]}
+            </Text>
+          </MenuButton>
+          <MenuList>{menuItemArray}</MenuList>
+        </>
+      )}
+    </Menu>
+  );
+};
+
+export default MenuComponent;
