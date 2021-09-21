@@ -4,17 +4,18 @@ import BrandedParagraph from "../BrandedParagraph";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import ProductFeature from "../ProductFeature";
 import MobileScreenshots from "../MobileScreenshots";
+import IconList from "../IconList";
 
 import Image from "next/image";
 import remoteControlPic from "../../public/tv.jpeg";
 
-import { Flex, Text, Button, useColorModeValue, Icon } from "@chakra-ui/react";
+import Particles from "../Particles/Particles";
+
+import { Flex, useColorModeValue } from "@chakra-ui/react";
 
 import theme from "../theme.js";
 
 const WelcomeScreen = () => {
-  console.log(theme);
-
   const bgGradientColor = useColorModeValue(
     theme.colors.brand.white,
     theme.colors.gray["700"]
@@ -109,7 +110,10 @@ const WelcomeScreen = () => {
           />
         </Flex>
       </section>
-      <section className="flexColumn" style={{ alignItems: "center" }}>
+      <section
+        className="flexColumn"
+        style={{ alignItems: "center", marginBottom: "2rem" }}
+      >
         <Flex
           // direction={["column", "column", "column", "row"]}
           pt="2rem"
@@ -135,6 +139,30 @@ const WelcomeScreen = () => {
             <MobileScreenshots />
           </Flex>
         </Flex>
+      </section>
+      <section
+        style={{
+          marginBottom: "2rem",
+          width: "100%",
+        }}
+      >
+        <Particles />
+        <IconList
+          items={[
+            {
+              icon: "BiSpreadsheet",
+              text: "Track impressions, conversion rates, and audience analytics.",
+            },
+            {
+              icon: "FiEdit",
+              text: "Adjust your campaign content to suit your changing business needs.",
+            },
+            {
+              icon: "BsChatDots",
+              text: "24/7 support from our network of advertising experts.",
+            },
+          ]}
+        />
       </section>
     </>
   );

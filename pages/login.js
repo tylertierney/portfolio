@@ -33,7 +33,7 @@ const Login = () => {
     e.preventDefault();
     setIsLoading(true);
     login();
-    console.log("submitted");
+
     console.log(email, password);
   };
 

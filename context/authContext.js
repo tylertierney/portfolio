@@ -101,8 +101,6 @@ const AuthProvider = ({ children }) => {
 
   const ctx = { user, login, logout };
 
-  console.log(ctx);
-
   return <AuthContext.Provider value={ctx}>{children}</AuthContext.Provider>;
 };
 

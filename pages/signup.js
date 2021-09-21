@@ -37,8 +37,6 @@ const Login = () => {
     console.log(firstName, lastName);
   };
 
-  console.log(firstName);
-
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
       <VStack mt="10vh">
