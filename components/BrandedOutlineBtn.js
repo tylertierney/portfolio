@@ -26,14 +26,14 @@ const BrandedOutlineBtn = ({ children, props }) => {
       {...props}
     >
       <Button
-        backgroundColor={useColorModeValue("white", "gray.700")}
+        backgroundColor={useColorModeValue("brand.white", "gray.700")}
         variant="outline"
         borderRadius="30px"
         h="96%"
         w="98%"
         color={useColorModeValue("gray.500", "brand.text.light")}
       >
-        View Examples
+        {children}
       </Button>
     </Flex>
   );

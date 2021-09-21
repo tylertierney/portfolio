@@ -10,6 +10,7 @@ import {
   Text,
   Button,
   InputRightElement,
+  Divider,
 } from "@chakra-ui/react";
 
 import useInput from "../hooks/useInput";
@@ -17,23 +18,30 @@ import { useState } from "react";
 
 import BrandedButton from "../components/BrandedButton/BrandedButton";
 
+import BrandedInput from "../components/BrandedInput";
+
 const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
 
   const email = useInput("");
   const password = useInput("");
+  const confirmPW = useInput("");
+  const firstName = useInput("");
+  const lastName = useInput("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
-    console.log("submitted");
-    console.log(email, password);
+
+    console.log(firstName, lastName);
   };
+
+  console.log(firstName);
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
-      <VStack>
+      <VStack mt="10vh">
         <Heading textAlign="center">Sign Up</Heading>
 
         <Text textAlign="center">
@@ -47,54 +55,43 @@ const Login = () => {
           boxShadow="0px 0px 20px 1px rgb(0, 0, 0, 0.3)"
         >
           <VStack align="center" spacing={5}>
-            {/* <FormLabel>Email</FormLabel> */}
-            <FormControl isRequired id="email" isDisabled={isLoading}>
-              <InputGroup>
-                <Input
-                  value={email.value}
-                  onChange={email.onChange}
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  id="email"
-                />
-              </InputGroup>
-              <FormErrorMessage>wrong</FormErrorMessage>
-            </FormControl>
-            <FormErrorMessage></FormErrorMessage>
-            {/* <FormLabel>Password</FormLabel> */}
-            <FormControl isRequired id="password" isDisabled={isLoading}>
-              <InputGroup>
-                <Input
-                  value={password.value}
-                  onChange={password.onChange}
-                  placeholder="Password"
-                  type={showPassword ? "text" : "password"}
-                  variant="outline"
-                  name="password"
-                  id="password"
-                />
-                <InputRightElement>
-                  <Button
-                    disabled={isLoading}
-                    onClick={() => setShowPassword(!showPassword)}
-                    variant="ghost"
-                    p="1rem 1.8rem"
-                    size="sm"
-                    mr="1.8rem"
-                    _focus={{ outline: "none" }}
-                    color="brand.text.light"
-                  >
-                    Show
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-              <FormErrorMessage>wrong</FormErrorMessage>
-            </FormControl>
+            <BrandedInput
+              name="First Name"
+              state={firstName}
+              isLoading={isLoading}
+              type="text"
+            />
+            <BrandedInput
+              name="Last Name"
+              state={lastName}
+              isLoading={isLoading}
+              type="text"
+            />
+            <Divider />
+            <BrandedInput
+              name="Email"
+              state={email}
+              isLoading={isLoading}
+              type="email"
+            />
+            <BrandedInput
+              name="Password"
+              state={password}
+              isLoading={isLoading}
+              type="password"
+            />
+            <BrandedInput
+              name="Confirm Password"
+              state={confirmPW}
+              isLoading={isLoading}
+              type="password"
+            />
             <BrandedButton
               disabled={isLoading}
               action="submit"
               props={{ width: "100%" }}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
             >
               Confirm
             </BrandedButton>

@@ -12,14 +12,19 @@ import {
   InputRightElement,
 } from "@chakra-ui/react";
 
+import { useUser } from "../context/authContext";
+
 import useInput from "../hooks/useInput";
 import { useState } from "react";
 
 import BrandedButton from "../components/BrandedButton/BrandedButton";
 
+import BrandedInput from "../components/BrandedInput";
+
 const Login = () => {
+  const { login } = useUser();
+
   const [isLoading, setIsLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
 
   const email = useInput("");
   const password = useInput("");
@@ -27,13 +32,14 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setIsLoading(true);
+    login();
     console.log("submitted");
     console.log(email, password);
   };
 
   return (
     <form onSubmit={(e) => handleSubmit(e)}>
-      <VStack>
+      <VStack mt="10vh">
         <Heading textAlign="center">Log In</Heading>
 
         <Text textAlign="center">Use this form to log into your account</Text>
@@ -45,54 +51,24 @@ const Login = () => {
           boxShadow="0px 0px 20px 1px rgb(0, 0, 0, 0.3)"
         >
           <VStack align="center" spacing={5}>
-            {/* <FormLabel>Email</FormLabel> */}
-            <FormControl isRequired id="email" isDisabled={isLoading}>
-              <InputGroup>
-                <Input
-                  value={email.value}
-                  onChange={email.onChange}
-                  type="email"
-                  placeholder="Email"
-                  name="email"
-                  id="email"
-                />
-              </InputGroup>
-              <FormErrorMessage>wrong</FormErrorMessage>
-            </FormControl>
-            <FormErrorMessage></FormErrorMessage>
-            {/* <FormLabel>Password</FormLabel> */}
-            <FormControl isRequired id="password" isDisabled={isLoading}>
-              <InputGroup>
-                <Input
-                  value={password.value}
-                  onChange={password.onChange}
-                  placeholder="Password"
-                  type={showPassword ? "text" : "password"}
-                  variant="outline"
-                  name="password"
-                  id="password"
-                />
-                <InputRightElement>
-                  <Button
-                    disabled={isLoading}
-                    onClick={() => setShowPassword(!showPassword)}
-                    variant="ghost"
-                    p="1rem 1.8rem"
-                    size="sm"
-                    mr="1.8rem"
-                    _focus={{ outline: "none" }}
-                    color="brand.text.light"
-                  >
-                    Show
-                  </Button>
-                </InputRightElement>
-              </InputGroup>
-              <FormErrorMessage>wrong</FormErrorMessage>
-            </FormControl>
+            <BrandedInput
+              name="Email"
+              state={email}
+              isLoading={isLoading}
+              type="email"
+            />
+            <BrandedInput
+              name="Password"
+              state={password}
+              isLoading={isLoading}
+              type="password"
+            />
             <BrandedButton
               disabled={isLoading}
               action="submit"
               props={{ width: "100%" }}
+              isLoading={isLoading}
+              setIsLoading={setIsLoading}
             >
               Log In
             </BrandedButton>

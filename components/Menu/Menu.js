@@ -9,8 +9,6 @@ import {
 } from "@chakra-ui/react";
 
 const MenuComponent = ({ menuName, menuIcon, menuItems }) => {
-  console.log(menuIcon);
-
   const menuItemArray = menuItems.map((item, index) => {
     return (
       <MenuItem key={index} onClick={item.onclick}>

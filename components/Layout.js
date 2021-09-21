@@ -17,11 +17,12 @@ const Layout = ({ children }) => {
       <main>
         <Navbar />
         <Box
+          maxW="100vw"
           mt="7vh"
           h="93vh"
           maxH="93vh"
-          paddingY={["8", "10", "14"]}
-          paddingX={["3", "10", "14"]}
+          // paddingY={["8", "10", "14"]}
+          paddingX={["3", "8", "0"]}
         >
           {children}
         </Box>

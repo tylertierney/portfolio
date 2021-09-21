@@ -12,10 +12,12 @@ const BrandedButton = ({
   children,
   props,
   disabled,
+  isLoading,
+  setIsLoading,
 }) => {
   const ref = useRef(null);
 
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
   const [minW, setMinW] = useState(0);
 
   const router = useRouter();
@@ -55,12 +57,10 @@ const BrandedButton = ({
       break;
   }
 
-  const noop = () => {};
-
   const button = (
     <Button
       ref={ref}
-      disabled={action === "submit" ? disabled : isLoading}
+      // disabled={action === "submit" ? disabled : isLoading}
       variant={variant}
       backgroundColor={bgColor}
       transition="0.3s ease-in-out"
@@ -73,12 +73,12 @@ const BrandedButton = ({
             }
       }
       _focus={{ outline: "none" }}
-      p="0rem 0.6rem"
-      onClick={action === "submit" ? noop() : () => setIsLoading(true)}
+      p="0.9rem 0.6rem"
+      onClick={() => setIsLoading(true)}
       minW={minW ? `${minW}px` : ""}
-      style={props}
-      // type={action === "submit" ? "submit" : ""}
       type="submit"
+      opacity={isLoading ? "0.4" : "1"}
+      {...props}
     >
       {isLoading ? (
         <Icon

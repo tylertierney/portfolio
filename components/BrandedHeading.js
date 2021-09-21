@@ -22,6 +22,8 @@ const BrandedHeading = ({ children, props }) => {
       maxW="480px"
       mb="0.9rem"
       {...props}
+      // textAlign="center"
+      p="0.3rem 0"
     >
       {children}
     </Heading>

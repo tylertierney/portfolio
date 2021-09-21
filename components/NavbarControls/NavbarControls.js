@@ -6,18 +6,16 @@ import { useUser } from "../../context/authContext";
 import UserMenu from "./UserMenu";
 
 const NavbarControls = () => {
-  const [loginDisabled, setLoginDisabled] = useState(false);
-  const [signupDisabled, setSignupDisabled] = useState(false);
+  // const [loginDisabled, setLoginDisabled] = useState(false);
+  // const [signupDisabled, setSignupDisabled] = useState(false);
+
+  const [loginIsLoading, setLoginIsLoading] = useState(false);
+  const [signupIsLoading, setSignupIsLoading] = useState(false);
 
   const { user } = useUser();
 
   return (
-    // <>
-    //   <ThemeSwitch />
-    //   {user ? (
-    //     <UserMenu />
-    //   ) : (
-    <Flex align="center" justify="center">
+    <Flex align="center" justify="center" h="100%">
       <ThemeSwitch />
       {user ? (
         <UserMenu />
@@ -29,6 +27,8 @@ const NavbarControls = () => {
             color="none"
             action="link"
             href="/login"
+            isLoading={loginIsLoading}
+            setIsLoading={setLoginIsLoading}
           >
             Log In
           </BrandedButton>
@@ -37,7 +37,9 @@ const NavbarControls = () => {
             color="primary"
             action="link"
             href="/signup"
-            props={{ margin: "0px 4px" }}
+            props={{ margin: "0px 4px", maxH: "90%" }}
+            isLoading={signupIsLoading}
+            setIsLoading={setSignupIsLoading}
           >
             Sign Up
           </BrandedButton>
