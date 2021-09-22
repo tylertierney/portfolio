@@ -39,7 +39,6 @@ const IconList = ({ items, props }) => {
           align="center"
           p="1rem"
           direction={["row", "row", "column"]}
-          //   border="solid green 1px"
         >
           <ListIcon
             mb={["0", "0", "1rem"]}

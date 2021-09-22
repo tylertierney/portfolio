@@ -3,6 +3,7 @@ import Logo from "../Logo/Logo";
 import Link from "next/link";
 
 import { FaFacebook, FaPinterest } from "react-icons/fa";
+import { SiFacebook } from "react-icons/si";
 import { RiLinkedinFill } from "react-icons/ri";
 import { AiOutlineTwitter } from "react-icons/ai";
 
@@ -90,51 +91,54 @@ const Footer = () => {
               </Link>
             </ListItem>
           </List>
-          <Flex
-            // border="solid pink 1px"
-            align="center"
-            fontSize="1.4rem"
-            justify="space-around"
-          >
+          <Flex align="center" fontSize="1.4rem" justify="space-around">
             <Link href="/" passHref>
-              <Icon
-                transition="0.3s ease-in-out"
-                opacity="0.5"
-                _hover={{ opacity: "1" }}
-                cursor="pointer"
-                mr="0.6rem"
-                as={FaFacebook}
-              />
+              <a>
+                <Icon
+                  transition="0.3s ease-in-out"
+                  opacity="0.5"
+                  _hover={{ opacity: "1" }}
+                  cursor="pointer"
+                  mr="0.6rem"
+                  as={FaFacebook}
+                />
+              </a>
             </Link>
             <Link href="/" passHref>
-              <Icon
-                as={FaPinterest}
-                transition="0.3s ease-in-out"
-                opacity="0.5"
-                _hover={{ opacity: "1" }}
-                cursor="pointer"
-                mr="0.6rem"
-              />
+              <a>
+                <Icon
+                  as={FaPinterest}
+                  transition="0.3s ease-in-out"
+                  opacity="0.5"
+                  _hover={{ opacity: "1" }}
+                  cursor="pointer"
+                  mr="0.6rem"
+                />
+              </a>
             </Link>
             <Link href="/" passHref>
-              <Icon
-                as={RiLinkedinFill}
-                transition="0.3s ease-in-out"
-                opacity="0.5"
-                _hover={{ opacity: "1" }}
-                cursor="pointer"
-                mr="0.6rem"
-              />
+              <a>
+                <Icon
+                  as={RiLinkedinFill}
+                  transition="0.3s ease-in-out"
+                  opacity="0.5"
+                  _hover={{ opacity: "1" }}
+                  cursor="pointer"
+                  mr="0.6rem"
+                />
+              </a>
             </Link>
             <Link href="/" passHref>
-              <Icon
-                as={AiOutlineTwitter}
-                transition="0.3s ease-in-out"
-                opacity="0.5"
-                _hover={{ opacity: "1" }}
-                cursor="pointer"
-                mr="0.6rem"
-              />
+              <a>
+                <Icon
+                  as={AiOutlineTwitter}
+                  transition="0.3s ease-in-out"
+                  opacity="0.5"
+                  _hover={{ opacity: "1" }}
+                  cursor="pointer"
+                  mr="0.6rem"
+                />
+              </a>
             </Link>
           </Flex>
         </Flex>

@@ -1,8 +1,6 @@
 import Particles from "react-particles-js";
 import params from "./Params.json";
 
-console.log(params);
-
 const ParticlesComponent = () => {
   return (
     <Particles

@@ -25,7 +25,7 @@ const Navbar = () => {
         h="7vh"
         p="1rem"
       >
-        <Logo props={{ color: "black" }} />
+        <Logo props={{ color: "brand.gray" }} />
         <NavbarControls />
       </Flex>
     </nav>

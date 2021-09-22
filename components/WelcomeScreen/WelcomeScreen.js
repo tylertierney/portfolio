@@ -157,16 +157,17 @@ const WelcomeScreen = () => {
             "brand.white",
             "rgb(55, 55, 55, 1)"
           )}
-          w="100%"
+          w="100vw"
           h="100%"
           clipPath="polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)"
         >
           <IconList
             props={{
               position: "absolute",
-              top: "0",
+              top: "50%",
               zIndex: "2",
-              marginTop: "6%",
+              width: "100vw",
+              transform: "translate(0, -50%)",
             }}
             items={[
               {
