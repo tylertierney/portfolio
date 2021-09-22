@@ -4,17 +4,27 @@ import { FiLayers } from "react-icons/fi";
 
 import router from "next/router";
 
-const Logo = () => {
+const Logo = ({ props }) => {
   return (
     <Flex
       align="center"
       userSelect="none"
       cursor="pointer"
       onClick={() => router.push("/")}
+      {...props}
     >
-      <Text color="black">LOGO</Text>
+      <Text
+        // color="black"
+        color="inherit"
+      >
+        LOGO
+      </Text>
 
-      <Icon as={FiLayers} color="black" />
+      <Icon
+        as={FiLayers}
+        color="inherit"
+        // color="black"
+      />
     </Flex>
   );
 };

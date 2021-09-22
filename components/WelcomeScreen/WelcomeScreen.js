@@ -58,7 +58,6 @@ const WelcomeScreen = () => {
           <Flex
             position="relative"
             justify="center"
-            // mb="2rem"
             minW={["100vw", "100vw", "100vw", "500px"]}
             zIndex="-1"
           >
@@ -74,7 +73,8 @@ const WelcomeScreen = () => {
               w="100%"
               h="100%"
               bg={[
-                ``,
+                `linear-gradient(180deg, ${bgGradientColor} 5%, rgba(255,255,255,0) 36%),
+                linear-gradient(0deg, ${bgGradientColor} 5%, rgba(255,255,255,0) 20%)`,
                 ``,
                 ``,
                 `linear-gradient(90deg, ${bgGradientColor} 5%, rgba(255,255,255,0) 36%)`,
@@ -85,12 +85,11 @@ const WelcomeScreen = () => {
       </section>
       <section className="flexColumn" style={{ alignItems: "center" }}>
         <Flex
-          //   bgColor="gray.500"
           align="center"
           direction={["column", "column", "column", "row"]}
           pt="2rem"
+          paddingX="1rem"
           mt={["2rem", "2rem", "2rem", "0"]}
-          //   mt="2rem"
           boxShadow="0px 0px 20px 1px rgb(0, 0, 0, 0.3)"
         >
           <ProductFeature
@@ -121,18 +120,21 @@ const WelcomeScreen = () => {
         >
           <Flex
             direction={["column", "column", "column", "row"]}
-            p={[
-              "2rem 2rem 0 2rem",
-              "2rem 2rem 0 2rem",
-              "2rem 2rem 0 2rem",
-              "2rem",
+            p={["2rem 0 0 0", "2rem 0 0 0", "2rem 2rem 0 2rem", "2rem"]}
+            align="center"
+            align={[
+              "flex-start",
+              "flex-start",
+              "flex-start",
+              "center",
+              "center",
             ]}
           >
             <Flex direction="column">
               <BrandedHeading>
                 Complete control at your fingertips
               </BrandedHeading>
-              <BrandedParagraph>
+              <BrandedParagraph props={{ fontSize: "1.4rem" }}>
                 Direct and analyze your campaign using our companion app.
               </BrandedParagraph>
             </Flex>
@@ -140,30 +142,51 @@ const WelcomeScreen = () => {
           </Flex>
         </Flex>
       </section>
-      <section
-        style={{
-          marginBottom: "2rem",
-          width: "100%",
-        }}
+      <Flex
+        position="relative"
+        mb="2rem"
+        maxH="600px"
+        w="100vw"
+        h="100%"
+        filter="drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.6))"
       >
-        <Particles />
-        <IconList
-          items={[
-            {
-              icon: "BiSpreadsheet",
-              text: "Track impressions, conversion rates, and audience analytics.",
-            },
-            {
-              icon: "FiEdit",
-              text: "Adjust your campaign content to suit your changing business needs.",
-            },
-            {
-              icon: "BsChatDots",
-              text: "24/7 support from our network of advertising experts.",
-            },
-          ]}
-        />
-      </section>
+        <Flex
+          position="relative"
+          minHeight={["500px", "400px", "300px"]}
+          minW="100vw"
+          backgroundColor={useColorModeValue(
+            "brand.white",
+            "rgb(55, 55, 55, 1)"
+          )}
+          w="100%"
+          h="100%"
+          clipPath="polygon(0% 10%, 100% 0%, 100% 90%, 0% 100%)"
+        >
+          <IconList
+            props={{
+              position: "absolute",
+              top: "0",
+              zIndex: "2",
+              marginTop: "6%",
+            }}
+            items={[
+              {
+                icon: "HiOutlineDocumentReport",
+                text: "Track impressions, conversion rates, and audience analytics.",
+              },
+              {
+                icon: "FiEdit",
+                text: "Adjust your campaign content to suit your changing business needs.",
+              },
+              {
+                icon: "BsChatDots",
+                text: "24/7 support from our network of advertising experts.",
+              },
+            ]}
+          />
+          <Particles />
+        </Flex>
+      </Flex>
     </>
   );
 };

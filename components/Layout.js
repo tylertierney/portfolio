@@ -1,7 +1,8 @@
 import Navbar from "./Navbar/Navbar";
 import Head from "next/head";
 import { useUser } from "../context/authContext";
-import { Box } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
+import Footer from "./Footer/Footer";
 
 const Layout = ({ children }) => {
   const { user } = useUser();
@@ -14,19 +15,28 @@ const Layout = ({ children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main style={{ width: "100vw" }}>
         <Navbar />
         <Box
           maxW="100vw"
           mt="7vh"
-          h="93vh"
-          maxH="93vh"
-          // paddingY={["8", "10", "14"]}
-          paddingX={["3", "8", "0"]}
+          minH="100vh"
+          // h="93vh"
+          // maxH="93vh"
+          paddingX={["3", "8", "0", "0"]}
         >
           {children}
         </Box>
       </main>
+      {/* <footer style={{ width: "100vw" }}>
+        <Flex
+          w="100%"
+          // h="100%"
+          backgroundColor="gray.700"
+          minH="200px"
+        ></Flex>
+      </footer> */}
+      <Footer />
     </>
   );
 };

@@ -10,6 +10,7 @@ const Navbar = () => {
         boxShadow: "0px 0px 20px 1px rgb(0, 0, 0, 0.3)",
         position: "fixed",
         // width: "100vw",
+        minWidth: "100vw",
         width: "100%",
         top: "0",
         left: "0",
