@@ -31,7 +31,7 @@ const Home = () => {
             <WelcomeScreen />
           )}
           <br />
-          <Link href="/profile">Go to profile</Link>
+          {/* <Link href="/profile">Go to profile</Link> */}
         </div>
       </main>
     </div>
