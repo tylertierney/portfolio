@@ -26,7 +26,7 @@ const BrandedOutlineBtn = ({ children, props }) => {
       {...props}
     >
       <Button
-        backgroundColor={useColorModeValue("brand.white", "gray.700")}
+        backgroundColor={useColorModeValue("brand.white", "brand.gray")}
         variant="outline"
         borderRadius="30px"
         h="96%"

@@ -15,7 +15,11 @@ const MobileScreenshots = () => {
         mt="8%"
         // something
       >
-        <Image src={MobileScreenshot1} className="screenshots borderRadius" />
+        <Image
+          alt="App screenshot"
+          src={MobileScreenshot1}
+          className="screenshots borderRadius"
+        />
       </Flex>
       <Flex
         w="30%"
@@ -23,14 +27,22 @@ const MobileScreenshots = () => {
         mt="4%"
         //something
       >
-        <Image src={MobileScreenshot2} className="screenshots borderRadius" />
+        <Image
+          alt="App screenshot"
+          src={MobileScreenshot2}
+          className="screenshots borderRadius"
+        />
       </Flex>
       <Flex
         w="30%"
         className="screenshots"
         //some
       >
-        <Image src={MobileScreenshot3} className="screenshots borderRadius" />
+        <Image
+          alt="App screenshot"
+          src={MobileScreenshot3}
+          className="screenshots borderRadius"
+        />
       </Flex>
     </Flex>
   );

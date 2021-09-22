@@ -29,6 +29,7 @@ const themeObj = {
         100: "#F9C5BD",
       },
       white: "#F5F5F5",
+      gray: "#2D3748",
       text: {
         dark: "#696969",
         light: "#E1E1E1",
@@ -46,7 +47,7 @@ const themeObj = {
   styles: {
     global: (props) => ({
       body: {
-        bg: mode("brand.white", "gray.700")(props),
+        bg: mode("brand.white", "brand.gray")(props),
       },
 
       p: {

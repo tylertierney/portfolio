@@ -10,6 +10,9 @@ const ParticlesComponent = () => {
         minHeight: "300px",
         maxHeight: "300px",
         zIndex: "1",
+        minWidth: "100vw",
+        width: "100vw",
+        // border: "solid red 2px",
       }}
       params={params}
     />

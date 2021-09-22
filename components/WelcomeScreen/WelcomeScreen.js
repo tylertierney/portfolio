@@ -121,7 +121,6 @@ const WelcomeScreen = () => {
           <Flex
             direction={["column", "column", "column", "row"]}
             p={["2rem 0 0 0", "2rem 0 0 0", "2rem 2rem 0 2rem", "2rem"]}
-            align="center"
             align={[
               "flex-start",
               "flex-start",

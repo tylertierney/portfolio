@@ -10,10 +10,9 @@ const Footer = () => {
   return (
     <footer style={{ width: "100vw" }}>
       <Flex
-        // border="1px solid red"
         w="100%"
         h="200px"
-        backgroundColor="gray.700"
+        backgroundColor="brand.gray"
         minH="200px"
         paddingX={["0.3rem", "2rem"]}
         align="center"
@@ -28,7 +27,8 @@ const Footer = () => {
           <Logo
             props={{
               fontSize: "inherit",
-              color: "white",
+              color: "brand.white",
+              opacity: "0.5",
               marginRight: "1rem",
               width: "80%",
               h: "100%",
@@ -52,18 +52,42 @@ const Footer = () => {
           fontSize={["0.7rem", "0.8rem", "1rem"]}
           color="brand.white"
         >
-          <List fontSize="inherit" color="inherit" spacing={4} opacity="0.5">
-            <ListItem>
-              <Link href="/">About Us</Link>
+          <List fontSize="inherit" color="inherit" spacing={4}>
+            <ListItem
+              opacity="0.5"
+              transition="0.3s ease-in-out"
+              _hover={{ opacity: "1" }}
+            >
+              <Link href="/" passHref>
+                About Us
+              </Link>
             </ListItem>
-            <ListItem>
-              <Link href="/">Contact</Link>
+            <ListItem
+              opacity="0.5"
+              transition="0.3s ease-in-out"
+              _hover={{ opacity: "1" }}
+            >
+              <Link href="/" passHref>
+                Contact
+              </Link>
             </ListItem>
-            <ListItem>
-              <Link href="/">Careers</Link>
+            <ListItem
+              opacity="0.5"
+              transition="0.3s ease-in-out"
+              _hover={{ opacity: "1" }}
+            >
+              <Link href="/" passHref>
+                Careers
+              </Link>
             </ListItem>
-            <ListItem>
-              <Link href="/">News</Link>
+            <ListItem
+              opacity="0.5"
+              transition="0.3s ease-in-out"
+              _hover={{ opacity: "1" }}
+            >
+              <Link href="/" passHref>
+                News
+              </Link>
             </ListItem>
           </List>
           <Flex
@@ -72,7 +96,7 @@ const Footer = () => {
             fontSize="1.4rem"
             justify="space-around"
           >
-            <Link href="/">
+            <Link href="/" passHref>
               <Icon
                 transition="0.3s ease-in-out"
                 opacity="0.5"
@@ -82,7 +106,7 @@ const Footer = () => {
                 as={FaFacebook}
               />
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Icon
                 as={FaPinterest}
                 transition="0.3s ease-in-out"
@@ -92,7 +116,7 @@ const Footer = () => {
                 mr="0.6rem"
               />
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Icon
                 as={RiLinkedinFill}
                 transition="0.3s ease-in-out"
@@ -102,7 +126,7 @@ const Footer = () => {
                 mr="0.6rem"
               />
             </Link>
-            <Link href="/">
+            <Link href="/" passHref>
               <Icon
                 as={AiOutlineTwitter}
                 transition="0.3s ease-in-out"

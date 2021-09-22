@@ -28,14 +28,7 @@ const Layout = ({ children }) => {
           {children}
         </Box>
       </main>
-      {/* <footer style={{ width: "100vw" }}>
-        <Flex
-          w="100%"
-          // h="100%"
-          backgroundColor="gray.700"
-          minH="200px"
-        ></Flex>
-      </footer> */}
+
       <Footer />
     </>
   );

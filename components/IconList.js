@@ -12,7 +12,9 @@ import { BsChatDots } from "react-icons/bs";
 import { HiOutlineDocumentReport } from "react-icons/hi";
 
 const IconList = ({ items, props }) => {
-  const listItemArray = items.map((item) => {
+  const iconBgColor = useColorModeValue("brand.white", "gray.600");
+
+  const listItemArray = items.map((item, index) => {
     let icon;
 
     switch (item.icon) {
@@ -30,7 +32,7 @@ const IconList = ({ items, props }) => {
     }
 
     return (
-      <ListItem mb="1.5rem">
+      <ListItem mb="0.4rem" key={index}>
         <Flex
           maxW={["100%", "", "300px"]}
           justify="center"
@@ -47,7 +49,7 @@ const IconList = ({ items, props }) => {
             borderRadius="50%"
             boxShadow="0px 0px 20px 1px rgb(0, 0, 0, 0.2)"
             p="0.6rem 0"
-            backgroundColor={useColorModeValue("brand.white", "gray.600")}
+            backgroundColor={iconBgColor}
             // border="solid pink 1px"
           />
           <Text
