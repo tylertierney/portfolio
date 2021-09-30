@@ -8,8 +8,8 @@ const Navbar = () => {
     <nav
       style={{
         boxShadow: "0px 0px 20px 1px rgb(0, 0, 0, 0.3)",
-        position: "fixed",
-        // width: "100vw",
+        position: "sticky",
+        top: "0vh",
         minWidth: "100vw",
         width: "100%",
         top: "0",

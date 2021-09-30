@@ -13,18 +13,11 @@ const Logo = ({ props }) => {
       onClick={() => router.push("/")}
       {...props}
     >
-      <Text
-        // color="black"
-        color="inherit"
-      >
-        LOGO
+      <Text fontFamily="Limelight, cursive" fontSize="1.5rem" color="inherit">
+        tyler.t
       </Text>
 
-      <Icon
-        as={FiLayers}
-        color="inherit"
-        // color="black"
-      />
+      {/* <Icon as={FiLayers} color="inherit" /> */}
     </Flex>
   );
 };
