@@ -1,5 +1,3 @@
-import "./hamburger.css";
-
 const Hamburger = ({ isNavmenuShowing, setNavmenuShowing }) => {
   const toggleNavmenu = () => {
     setNavmenuShowing(!isNavmenuShowing);

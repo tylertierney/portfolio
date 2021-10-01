@@ -7,7 +7,7 @@ import MobileScreenshots from "../MobileScreenshots";
 import IconList from "../IconList";
 
 import Image from "next/image";
-import remoteControlPic from "../../public/tv.jpeg";
+import gatorPic from "../../public/images/gatorpic.jpg";
 
 import Particles from "../Particles/Particles";
 
@@ -61,11 +61,14 @@ const WelcomeScreen = () => {
             minW={["100vw", "100vw", "100vw", "500px"]}
             zIndex="-1"
           >
-            <Image
-              priority={true}
-              alt="Person watching television"
-              src={remoteControlPic}
-            />
+            <Flex filter="brightness(75%)">
+              <Image
+                priority={true}
+                alt="Person watching television"
+                src={gatorPic}
+                style={{ filter: "grayscale(90%)" }}
+              />
+            </Flex>
             <Flex
               position="absolute"
               top="0"

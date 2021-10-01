@@ -13,6 +13,8 @@ const ThemeSwitch = () => {
           <SunIcon color="brand.text.dark" />
         )
       }
+      display="flex"
+      alignItems="center"
       onClick={toggleColorMode}
       color="black"
       variant="unstyled"

@@ -2,22 +2,17 @@ import hamburgerStyles from "./hamburger.module.css";
 import { Box } from "@chakra-ui/react";
 
 const Hamburger = ({ isNavmenuShowing, setNavmenuShowing }) => {
-  const toggleNavmenu = () => {
-    setNavmenuShowing(!isNavmenuShowing);
-  };
+  console.log(isNavmenuShowing);
   return (
     <Box
       className={
-        // isNavmenuShowing ? "hamburgerContainer change" : "hamburgerContainer"
-        isNavmenuShowing
-          ? `${hamburgerStyles.hamburgerContainer} change`
-          : `${hamburgerStyles.hamburgerContainer}`
+        isNavmenuShowing ? `hamburgerContainer change` : `hamburgerContainer`
       }
-      onClick={() => toggleNavmenu()}
+      onClick={() => setNavmenuShowing(!isNavmenuShowing)}
     >
-      <Box className={hamburgerStyles.bar1}></Box>
-      <Box className={hamburgerStyles.bar2}></Box>
-      <Box className={hamburgerStyles.bar3}></Box>
+      <Box backgroundColor="brand.text.dark" className="bar1"></Box>
+      <Box backgroundColor="brand.text.dark" className="bar2"></Box>
+      <Box backgroundColor="brand.text.dark" className="bar3"></Box>
     </Box>
   );
 };
