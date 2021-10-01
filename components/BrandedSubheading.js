@@ -6,8 +6,8 @@ const BrandedSubheading = ({ children, props }) => {
       mb="0.9rem"
       size="lg"
       color={useColorModeValue("gray.500", "brand.text.light")}
-      {...props}
       p="0.3rem"
+      {...props}
     >
       {children}
     </Heading>

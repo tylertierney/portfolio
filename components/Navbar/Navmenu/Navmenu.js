@@ -26,7 +26,10 @@ const Navmenu = ({ handleScroll, isNavmenuShowing }) => {
             fontSize={["0.8rem", "0.9rem", "1rem"]}
             paddingX={["0.2rem", "0.8rem", "1.2rem"]}
             cursor="pointer"
-            _hover={{ backgroundColor: "brand.gray", color: "brand.white" }}
+            _hover={{
+              // backgroundColor: "brand.gray",
+              color: "brand.primary.1000",
+            }}
             justify="center"
             align="center"
             onClick={() => handleScroll("about")}

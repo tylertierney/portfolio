@@ -23,7 +23,7 @@ const WelcomeScreen = () => {
 
   return (
     <>
-      <section>
+      {/* <section>
         <Flex
           maxW="100%"
           minW="100%"
@@ -40,7 +40,7 @@ const WelcomeScreen = () => {
               "2rem",
             ]}
           >
-            <BrandedHeading>
+            <BrandedHeading props={{ p: "0.3rem 0" }}>
               Leading the Evolution in Local OTT & CTV Advertising
             </BrandedHeading>
             <BrandedSubheading>
@@ -64,9 +64,8 @@ const WelcomeScreen = () => {
             <Flex filter="brightness(75%)">
               <Image
                 priority={true}
-                alt="Person watching television"
+                alt="Tyler at the University of Florida"
                 src={gatorPic}
-                style={{ filter: "grayscale(90%)" }}
               />
             </Flex>
             <Flex
@@ -85,7 +84,7 @@ const WelcomeScreen = () => {
             ></Flex>
           </Flex>
         </Flex>
-      </section>
+      </section> */}
       <section className="flexColumn" style={{ alignItems: "center" }}>
         <Flex
           align="center"
