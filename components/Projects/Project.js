@@ -1,7 +1,8 @@
-import { Flex, Text, Icon } from "@chakra-ui/react";
+import { Flex, Text, Icon, Box } from "@chakra-ui/react";
 import BrandedSubheading from "../BrandedSubheading";
 import BrandedParagraph from "../BrandedParagraph";
 import linkbase_phone from "../../public/images/linkbase_phone.png";
+import linkbase_phone2 from "../../public/images/linkbase_phone2.png";
 
 import Image from "next/image";
 
@@ -56,14 +57,29 @@ const Project = ({ item, index }) => {
           })}
         </Flex>
       </Flex>
-      <Flex maxW="240px" position="relative" className="linkbaseIphoneRender">
-        <Image
-          src={linkbase_phone}
-          placeholder="blur"
-          layout="intrinsic"
+      <Box>
+        <Flex maxW="240px" position="relative" className="linkbaseIphoneRender">
+          <Image
+            src={linkbase_phone}
+            placeholder="blur"
+            layout="intrinsic"
+            className="linkbaseIphoneRender"
+          />
+        </Flex>
+        <Flex
+          maxW="500px"
+          minW="200px"
+          position="relative"
           className="linkbaseIphoneRender"
-        />
-      </Flex>
+        >
+          <Image
+            src={linkbase_phone2}
+            placeholder="blur"
+            layout="intrinsic"
+            className="linkbaseIphoneRender"
+          />
+        </Flex>
+      </Box>
     </Flex>
   );
 };
