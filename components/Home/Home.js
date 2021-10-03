@@ -53,7 +53,7 @@ const Home = () => {
             fontSize="2.2rem"
             fontWeight="100"
           >
-            Hey, how's it going?
+            Hey, how&apos;s it going?
           </Text>
           <br />
           <Text

@@ -20,6 +20,7 @@ const IphoneRenders = () => {
           zIndex="2"
         >
           <Image
+            alt="LinkBase iPhone Mockup"
             src={linkbase_phone}
             placeholder="blur"
             layout="intrinsic"
@@ -35,6 +36,7 @@ const IphoneRenders = () => {
           left="-140px"
         >
           <Image
+            alt="LinkBase iPhone Mockup"
             src={linkbase_phone2}
             placeholder="blur"
             layout="intrinsic"
