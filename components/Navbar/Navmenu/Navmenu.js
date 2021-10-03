@@ -1,7 +1,7 @@
 import { Flex } from "@chakra-ui/react";
 
 const Navmenu = ({ handleScroll, isNavmenuShowing }) => {
-  const menuItems = ["About", "Projects", "Experience", "Contact"];
+  const menuItems = ["Projects", "Experience", "Contact"];
 
   let animation = "";
 

@@ -20,7 +20,12 @@ const Layout = ({ children }) => {
       <main style={{ maxWidth: "100vw" }}>
         <Home />
         <Navbar />
-        <Box maxW="100vw" minH="100vh" paddingX={["3", "8", "0", "0"]}>
+        <Box
+          maxW="100vw"
+          overflowX="hidden"
+          minH="100vh"
+          paddingX={["3", "8", "0", "0"]}
+        >
           {children}
         </Box>
       </main>

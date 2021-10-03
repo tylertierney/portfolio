@@ -8,9 +8,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AuthContextProvider>
       <ChakraProvider theme={theme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
       </ChakraProvider>
     </AuthContextProvider>
   );

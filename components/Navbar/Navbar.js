@@ -25,7 +25,7 @@ const Navbar = () => {
         justify="space-between"
         w="100%"
         h="7vh"
-        pr="1rem"
+        paddingX="1rem"
       >
         {isNavmenuShowing ? (
           <Navmenu isNavmenuShowing={isNavmenuShowing} />

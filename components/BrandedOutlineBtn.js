@@ -15,6 +15,8 @@ const BrandedOutlineBtn = ({ children, props }) => {
       bgGradient = "linear(to-r, brand.primary.1000,lightblue)";
   }
 
+  // const textShadowColor = useColorModeValue("brand.gray", "")
+
   return (
     <Flex
       h="3rem"
@@ -29,9 +31,10 @@ const BrandedOutlineBtn = ({ children, props }) => {
         backgroundColor={useColorModeValue("brand.white", "brand.gray")}
         variant="outline"
         borderRadius="30px"
-        h="96%"
+        h="95%"
         w="98%"
         color={useColorModeValue("gray.500", "brand.text.light")}
+        textShadow="1px 1px rgb(0, 0, 0, 0.1)"
       >
         {children}
       </Button>

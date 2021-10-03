@@ -2,7 +2,6 @@ import hamburgerStyles from "./hamburger.module.css";
 import { Box } from "@chakra-ui/react";
 
 const Hamburger = ({ isNavmenuShowing, setNavmenuShowing }) => {
-  console.log(isNavmenuShowing);
   return (
     <Box
       className={

@@ -7,8 +7,6 @@ import BrandedSubheading from "../BrandedSubheading";
 import Project from "./Project";
 
 const Projects = () => {
-  console.log(data);
-
   return (
     <section>
       <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem" }}>
@@ -27,7 +25,7 @@ const Projects = () => {
         ...
       </BrandedHeading>
       {data.projects.map((item, index) => {
-        return <Project item={item} />;
+        return <Project key={index} item={item} />;
       })}
     </section>
   );

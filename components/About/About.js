@@ -56,9 +56,9 @@ const About = () => {
             fontSize: "1.2rem",
           }}
         >
-          I am a frontend developer based out of Tampa, Fl. I graduated from the
-          University of Florida in 2019 and have worked in local advertising as
-          well as commercial real estate.
+          My name is Tyler Tierney and I am a frontend developer based out of
+          Tampa, Fl. I graduated from the University of Florida in 2019 and have
+          worked in local advertising as well as commercial real estate.
         </BrandedParagraph>
         <Flex w="100%" mb="2rem" align="center" justify="flex-end">
           <Text
@@ -70,7 +70,7 @@ const About = () => {
             borderBottom="solid 1px"
             color={useColorModeValue("gray.500", "brand.text.light")}
           >
-            Contact
+            LinkedIn
           </Text>
           <BrandedOutlineBtn props={{ color: "blue" }}>
             Resumé

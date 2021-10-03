@@ -1,4 +1,11 @@
-import { Flex, List, ListItem, Icon } from "@chakra-ui/react";
+import {
+  Flex,
+  List,
+  ListItem,
+  Icon,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import Logo from "../Logo/Logo";
 import Link from "next/link";
 
@@ -10,7 +17,7 @@ import { AiOutlineTwitter } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer style={{ width: "100vw" }}>
-      <Flex
+      {/* <Flex
         w="100%"
         h="200px"
         backgroundColor="brand.gray"
@@ -142,6 +149,19 @@ const Footer = () => {
             </Link>
           </Flex>
         </Flex>
+      </Flex> */}
+      <Flex
+        w="100%"
+        h="200px"
+        backgroundColor="brand.gray"
+        minH="200px"
+        paddingX={["0.3rem", "2rem"]}
+        justify="center"
+        align="center"
+      >
+        <Text opacity={useColorModeValue("1", "0.5")}>
+          Copyright Tyler Tierney 2021
+        </Text>
       </Flex>
     </footer>
   );

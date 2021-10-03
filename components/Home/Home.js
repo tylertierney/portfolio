@@ -32,7 +32,7 @@ const Home = () => {
     },
     {
       icon: FiFileText,
-      link: "https://www.linkedin.com/in/tyler--tierney/",
+      link: "/tierneyresume_21.pdf",
       name: "Resumé",
     },
   ];
@@ -46,38 +46,11 @@ const Home = () => {
       justify="space-around"
       align="center"
     >
-      {/* <VStack
-        direction="column"
-        align="center"
-        spacing={6}
-      >
-        <Flex
-          borderRadius="50%"
-          justify="center"
-          align="center"
-          maxH="190px"
-          overflow="hidden"
-          boxShadow="0px 0px 20px 1px rgb(0, 0, 0, 0.4)"
-        >
-          <Image
-            src={headshot}
-            alt="Headshot"
-            width="185px"
-            height="231px"
-            layout="fixed"
-          />
-        </Flex>
-        <Flex direction="column" align="center">
-          <Text fontSize="1.4rem">Tyler Tierney</Text>
-          <Text fontSize="1.4rem">Software Developer</Text>
-          <Text fontSize="1.4rem">Tampa, Fl</Text>
-        </Flex>
-      </VStack> */}
-      <VStack>
+      <VStack userSelect="none">
         <Flex direction="column" align="center" justify="space-around">
           <Text
             animation="headingReveal 0.6s linear forwards"
-            fontSize="2.4rem"
+            fontSize="2.2rem"
             fontWeight="100"
           >
             Hey, how's it going?
@@ -87,7 +60,7 @@ const Home = () => {
             animation="headingReveal 0.6s linear forwards"
             textAlign="center"
             maxW="75%"
-            fontSize="2.4rem"
+            fontSize="2.2rem"
             fontWeight="100"
           >
             My name is&nbsp;
@@ -112,8 +85,9 @@ const Home = () => {
               direction="column"
               align="center"
               className="homeIconsContainer"
+              key={index}
             >
-              <Link key={index} href={item.link} passHref className="homeIcons">
+              <Link href={item.link} passHref className="homeIcons">
                 <a target="_blank">
                   <Icon
                     color={iconColor}

@@ -103,12 +103,13 @@ const data = {
     {
       title: "LinkBase",
       description:
-        "LinkBase began as my personal introduction to Next.js. The project is a full-stack social media platform. User auth is provided by Netlify Identity, database operations are managed through MongoDB, and image storage is provided by Amazon S3. The frontend uses Chakra UI in tandem with Next JS to provide server-side rendering, static page generation, and dynamic routing. All backend operations are written using Node JS.",
+        "LinkBase began as my introduction to Next.js. The project is a full-stack social media platform. User auth is provided by Netlify Identity, database operations are managed through MongoDB, and image storage is provided by Amazon S3. The frontend uses Chakra UI in tandem with Next JS to provide server-side rendering, static page generation, and dynamic routing. All backend operations are written using Node JS.",
       hostedsite: "https://link-base.netlify.app/",
       github: "https://github.com/tylertierney/link-base",
-      desktop_screenshot: "assets/images/linkbase_desktop.png",
-      mobile_screenshot: "assets/images/linkbase_mobile.png",
-      mobile_screenshot2: "assets/images/linkbase_mobile2.png",
+      desktop_screenshot: "public/images/screenshots/linkbase_desktop.png",
+      mobile_screenshot: "public/images/screenshots/linkbase_mobile.png",
+      mobile_screenshot2: "public/images/screenshots/linkbase_mobile2.png",
+      local_url: "linkbase",
       tech_stack: [
         {
           name: "React",
@@ -146,9 +147,15 @@ const data = {
         "This site provides a facility management and project tracking dashboard for commercial real estate managers working with outside firms. The firm enters data into an excel sheet and uploads the JSON-ified version to the site. The site transforms datapoints like important dates, timelines, relevant messages, and facility info into an actionable interface for their clients to view as a quick point of reference.",
       hostedsite: "https://tylertierney.github.io/facilitytracker/",
       github: "https://github.com/tylertierney/facilitytracker",
-      desktop_screenshot: "assets/images/facilitytracker_desktop.png",
-      mobile_screenshot: "assets/images/facilitytracker_mobile.png",
-      mobile_screenshot2: "assets/images/facilitytracker_mobile2.png",
+      desktop_screenshot:
+        "public/images/screenshots/facilitytracker_desktop.png",
+      mobile_screenshot:
+        "../../public/images/screenshots/facilitytracker_mobile.png",
+      mobile_screenshot2:
+        "../../public/images/screenshots/facilitytracker_mobile2.png",
+      mobile_screenshot3:
+        "../../public/images/screenshots/facilitytracker_mobile3.png",
+      local_url: "facilitytracker",
       tech_stack: [
         {
           name: "React",
@@ -166,9 +173,10 @@ const data = {
         "The Scoop is my first attempt at building a web scraper. Instead of using an API, I parsed HTML from CNN Lite to build a search interface and email notification system. This was also my first project to fully integrate user authentication, in this case those services were provided by Firebase.",
       hostedsite: "https://thescoop-news.herokuapp.com/",
       github: "https://github.com/tylertierney/webscraper",
-      desktop_screenshot: "assets/images/thescoop_desktop.png",
-      mobile_screenshot: "assets/images/thescoop_mobile.png",
-      mobile_screenshot2: "assets/images/thescoop_mobile2.png",
+      desktop_screenshot: "public/images/screenshots/thescoop_desktop.png",
+      mobile_screenshot: "public/images/screenshots/thescoop_mobile.png",
+      mobile_screenshot2: "public/images/screenshots/thescoop_mobile2.png",
+      local_url: "thescoop",
       tech_stack: [
         {
           name: "React",
@@ -198,15 +206,11 @@ const data = {
         "This eCommerce project was one of my first React applications. Functionality is limited as there are no database connections; this site was simply an opportunity to explore React hooks and develop a frontend.",
       hostedsite: "https://tylertierney.github.io/eCommerce/",
       github: "https://github.com/tylertierney/eCommerce",
-      desktop_screenshot: "assets/images/ecommerce_desktop.png",
-      mobile_screenshot: "assets/images/ecommerce_mobile.jpg",
-      mobile_screenshot2: "assets/images/ecommerce_mobile2.jpg",
-      tech_stack: [
-        {
-          name: "React",
-          icon: "FaReact",
-        },
-      ],
+      desktop_screenshot: "public/images/screenshots/ecommerce_desktop.png",
+      mobile_screenshot: "public/images/screenshots/ecommerce_mobile.jpg",
+      mobile_screenshot2: "public/images/screenshots/ecommerce_mobile2.jpg",
+      local_url: "ecommerce",
+      tech_stack: [],
     },
   ],
 };
