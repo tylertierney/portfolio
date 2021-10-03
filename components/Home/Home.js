@@ -88,7 +88,7 @@ const Home = () => {
               key={index}
             >
               <Link href={item.link} passHref className="homeIcons">
-                <a target="_blank">
+                <a target="_blank" aria-label={item.name}>
                   <Icon
                     color={iconColor}
                     as={item.icon}

@@ -93,14 +93,10 @@ const Project = ({ item, index }) => {
                   mr="0.8rem"
                   color={useColorModeValue("brand.gray", "brand.text.light")}
                   borderBottom="1px solid"
+                  _hover={{ opacity: "0.7" }}
+                  transition="0.3s ease-in-out"
                 >
-                  <Text
-                    color="inherit"
-                    mr="0.1rem"
-                    cursor="pointer"
-                    transition="0.3s ease-in-out"
-                    _hover={{ opacity: "0.7" }}
-                  >
+                  <Text color="inherit" mr="0.1rem" cursor="pointer">
                     Github
                   </Text>
                   <Icon color="inherit" as={AiFillGithub} />
@@ -112,10 +108,7 @@ const Project = ({ item, index }) => {
                 <BrandedOutlineBtn props={{ color: "blue" }}>
                   <Flex justify="space-between" align="center">
                     <Text mr="0.1rem">Live Site</Text>
-                    <Icon
-                      // color={useColorModeValue("brand.gray")}
-                      as={BsArrowUpRight}
-                    />
+                    <Icon as={BsArrowUpRight} />
                   </Flex>
                 </BrandedOutlineBtn>
               </a>
@@ -126,7 +119,6 @@ const Project = ({ item, index }) => {
               {item.tech_stack.map((icon, index) => {
                 const iconRef = icons[icon.icon][icon.icon];
                 const iconColor = icons[icon.icon]["color"];
-                console.log(iconColor);
 
                 return (
                   <Flex

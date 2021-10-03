@@ -1,7 +1,17 @@
 import { Flex } from "@chakra-ui/react";
 
-const Navmenu = ({ handleScroll, isNavmenuShowing }) => {
-  const menuItems = ["Projects", "Experience", "Contact"];
+const Navmenu = ({
+  handleScroll,
+  isNavmenuShowing,
+  projectsRef,
+  experienceRef,
+  contactRef,
+}) => {
+  const menuItems = [
+    { name: "Projects", ref: projectsRef },
+    { name: "Experience", ref: experienceRef },
+    { name: "Contact", ref: contactRef },
+  ];
 
   let animation = "";
 
@@ -10,6 +20,8 @@ const Navmenu = ({ handleScroll, isNavmenuShowing }) => {
   } else {
     animation = "slideaway";
   }
+
+  console.log(handleScroll);
 
   return (
     <Flex
@@ -32,10 +44,10 @@ const Navmenu = ({ handleScroll, isNavmenuShowing }) => {
             }}
             justify="center"
             align="center"
-            onClick={() => handleScroll("about")}
+            onClick={() => handleScroll(item.ref)}
             key={index}
           >
-            {item}
+            {item.name}
           </Flex>
         );
       })}

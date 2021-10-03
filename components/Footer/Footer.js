@@ -17,139 +17,6 @@ import { AiOutlineTwitter } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer style={{ width: "100vw" }}>
-      {/* <Flex
-        w="100%"
-        h="200px"
-        backgroundColor="brand.gray"
-        minH="200px"
-        paddingX={["0.3rem", "2rem"]}
-        align="center"
-        justify="space-around"
-      >
-        <Flex
-          h="100%"
-          w="25%"
-          align="center"
-          fontSize={["1rem", "1.5rem", "2rem"]}
-        >
-          <Logo
-            props={{
-              fontSize: "inherit",
-              color: "brand.white",
-              opacity: "0.5",
-              marginRight: "1rem",
-              width: "80%",
-              h: "100%",
-            }}
-          />
-          <Flex
-            borderRadius="lg"
-            opacity="0.3"
-            h="80%"
-            maxH="90%"
-            w="2px"
-            backgroundColor="brand.white"
-          ></Flex>
-        </Flex>
-        <Flex
-          w="75%"
-          h="100%"
-          //   border="solid blue 1px"
-          justify="space-around"
-          align="center"
-          fontSize={["0.7rem", "0.8rem", "1rem"]}
-          color="brand.white"
-        >
-          <List fontSize="inherit" color="inherit" spacing={4}>
-            <ListItem
-              opacity="0.5"
-              transition="0.3s ease-in-out"
-              _hover={{ opacity: "1" }}
-            >
-              <Link href="/" passHref>
-                About Us
-              </Link>
-            </ListItem>
-            <ListItem
-              opacity="0.5"
-              transition="0.3s ease-in-out"
-              _hover={{ opacity: "1" }}
-            >
-              <Link href="/" passHref>
-                Contact
-              </Link>
-            </ListItem>
-            <ListItem
-              opacity="0.5"
-              transition="0.3s ease-in-out"
-              _hover={{ opacity: "1" }}
-            >
-              <Link href="/" passHref>
-                Careers
-              </Link>
-            </ListItem>
-            <ListItem
-              opacity="0.5"
-              transition="0.3s ease-in-out"
-              _hover={{ opacity: "1" }}
-            >
-              <Link href="/" passHref>
-                News
-              </Link>
-            </ListItem>
-          </List>
-          <Flex align="center" fontSize="1.4rem" justify="space-around">
-            <Link href="/" passHref>
-              <a>
-                <Icon
-                  transition="0.3s ease-in-out"
-                  opacity="0.5"
-                  _hover={{ opacity: "1" }}
-                  cursor="pointer"
-                  mr="0.6rem"
-                  as={FaFacebook}
-                />
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <a>
-                <Icon
-                  as={FaPinterest}
-                  transition="0.3s ease-in-out"
-                  opacity="0.5"
-                  _hover={{ opacity: "1" }}
-                  cursor="pointer"
-                  mr="0.6rem"
-                />
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <a>
-                <Icon
-                  as={RiLinkedinFill}
-                  transition="0.3s ease-in-out"
-                  opacity="0.5"
-                  _hover={{ opacity: "1" }}
-                  cursor="pointer"
-                  mr="0.6rem"
-                />
-              </a>
-            </Link>
-            <Link href="/" passHref>
-              <a>
-                <Icon
-                  as={AiOutlineTwitter}
-                  transition="0.3s ease-in-out"
-                  opacity="0.5"
-                  _hover={{ opacity: "1" }}
-                  cursor="pointer"
-                  mr="0.6rem"
-                />
-              </a>
-            </Link>
-          </Flex>
-        </Flex>
-      </Flex> */}
       <Flex
         w="100%"
         h="200px"
@@ -158,6 +25,7 @@ const Footer = () => {
         paddingX={["0.3rem", "2rem"]}
         justify="center"
         align="center"
+        userSelect="none"
       >
         <Text opacity={useColorModeValue("1", "0.5")}>
           Copyright Tyler Tierney 2021

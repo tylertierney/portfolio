@@ -6,7 +6,7 @@ import NavbarControls from "../NavbarControls/NavbarControls";
 import { useState } from "react";
 import Navmenu from "./Navmenu/Navmenu";
 
-const Navbar = () => {
+const Navbar = ({ handleScroll, projectsRef, experienceRef, contactRef }) => {
   const [isNavmenuShowing, setNavmenuShowing] = useState(false);
 
   return (
@@ -28,7 +28,13 @@ const Navbar = () => {
         paddingX="1rem"
       >
         {isNavmenuShowing ? (
-          <Navmenu isNavmenuShowing={isNavmenuShowing} />
+          <Navmenu
+            experienceRef={experienceRef}
+            contactRef={contactRef}
+            projectsRef={projectsRef}
+            handleScroll={handleScroll}
+            isNavmenuShowing={isNavmenuShowing}
+          />
         ) : (
           <Logo
             props={{ color: "brand.text.dark" }}

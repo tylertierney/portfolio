@@ -5,8 +5,37 @@ import Navbar from "../components/Navbar/Navbar";
 import Home from "../components/Home/Home";
 import Head from "next/head";
 import Footer from "../components/Footer/Footer";
+import Contact from "../components/Contact/Contact";
+import { useRef } from "react";
 
 const Index = () => {
+  const projectsRef = useRef(null);
+  const experienceRef = useRef(null);
+  const contactRef = useRef(null);
+
+  // const handleScroll = {
+  //   projects: () => {
+  //     const refHeight = projectsRef.current.offsetTop;
+
+  //       window.document.body.scrollTo({
+  //         top: refHeight - 75,
+  //         left: 0,
+  //         behavior: "smooth",
+  //       })
+
+  //   },
+  // };
+
+  const handleScroll = (ref) => {
+    const refHeight = ref.current.offsetTop;
+
+    window.document.body.scrollTo({
+      top: refHeight - 75,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <>
       <Head>
@@ -17,7 +46,13 @@ const Index = () => {
       </Head>
       <main>
         <Home />
-        <Navbar />
+        <Navbar
+          handleScroll={handleScroll}
+          experienceRef={experienceRef}
+          contactRef={contactRef}
+          projectsRef={projectsRef}
+        />
+
         <Box
           maxW="100vw"
           overflowX="hidden"
@@ -42,7 +77,12 @@ const Index = () => {
                 ]}
               >
                 <About />
-                <Projects />
+                <div ref={projectsRef}>
+                  <Projects />
+                </div>
+                <div ref={contactRef}>
+                  <Contact />
+                </div>
               </Flex>
             </Flex>
             <br />
