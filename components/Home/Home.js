@@ -9,7 +9,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import headshot from "../../public/images/headshot.jpg";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
 import BrandedHeading from "../BrandedHeading";
@@ -46,6 +46,26 @@ const Home = () => {
       justify="space-around"
       align="center"
     >
+      <Flex
+        position="absolute"
+        left="0"
+        top="0"
+        w="100%"
+        justify="flex-end"
+        paddingX="1rem"
+        // mb="auto"
+        opacity="0.3"
+        paddingY="0.5rem"
+      >
+        <Link href="mailto:tytierney@yahoo.com" passHref>
+          <a>
+            <Flex align="center">
+              <Text fontWeight="200">tytierney@yahoo.com&nbsp;</Text>
+              <Icon as={AiOutlineMail} fontSize="1.2rem" color={iconColor} />
+            </Flex>
+          </a>
+        </Link>
+      </Flex>
       <VStack userSelect="none">
         <Flex direction="column" align="center" justify="space-around">
           <Text

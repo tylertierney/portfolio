@@ -103,7 +103,7 @@ const data = {
     {
       title: "LinkBase",
       description:
-        "LinkBase began as my introduction to Next.js. The project is a full-stack social media platform. User auth is provided by Netlify Identity, database operations are managed through MongoDB, and image storage is provided by Amazon S3. The frontend uses Chakra UI in tandem with Next JS to provide server-side rendering, static page generation, and dynamic routing. All backend operations are written using Node JS.",
+        "LinkBase began as my introduction to Next.js. The project is a full-stack social media platform. User authentication is provided by Netlify Identity, database operations are managed through MongoDB, and image storage is provided by Amazon S3. The frontend uses Chakra UI in tandem with Next JS to provide server-side rendering, static page generation, and dynamic routing. All backend operations are written using Node JS.",
       hostedsite: "https://link-base.netlify.app/",
       github: "https://github.com/tylertierney/link-base",
       desktop_screenshot: "public/images/screenshots/linkbase_desktop.png",

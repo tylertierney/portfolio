@@ -25,6 +25,8 @@ const BrandedInput = ({ name, props, isLoading, state, type }) => {
           _focus={{ outline: "none" }}
           placeholder={name}
           color={textColor}
+          value={state.value}
+          onChange={state.onChange}
         />
       ) : (
         <InputGroup>

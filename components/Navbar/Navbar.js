@@ -14,6 +14,7 @@ const Navbar = ({ handleScroll, projectsRef, experienceRef, contactRef }) => {
       style={{
         boxShadow: "0px 0px 20px 1px rgb(0, 0, 0, 0.3)",
         position: "sticky",
+        position: "-webkit-sticky",
         maxWidth: "100vw",
         top: "0vh",
         zIndex: 1000,

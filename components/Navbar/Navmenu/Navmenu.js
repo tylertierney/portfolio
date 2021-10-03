@@ -21,8 +21,6 @@ const Navmenu = ({
     animation = "slideaway";
   }
 
-  console.log(handleScroll);
-
   return (
     <Flex
       animation={`${animation} 0.3s ease-in-out forwards`}

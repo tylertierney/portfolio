@@ -28,12 +28,14 @@ const Index = () => {
 
   const handleScroll = (ref) => {
     const refHeight = ref.current.offsetTop;
-
-    window.document.body.scrollTo({
-      top: refHeight - 75,
-      left: 0,
-      behavior: "smooth",
-    });
+    console.log(ref);
+    // window.document.body.scrollTo({
+    //   top: refHeight - 75,
+    //   left: 0,
+    //   behavior: "smooth",
+    // });
+    window.document.body.scrollTo(0, 1000);
+    console.log(window);
   };
 
   return (
@@ -53,13 +55,13 @@ const Index = () => {
           projectsRef={projectsRef}
         />
 
-        <Box
-          maxW="100vw"
-          overflowX="hidden"
-          minH="100vh"
-          paddingX={["3", "8", "0", "0"]}
-        >
-          <Flex direction="column" align="center" justify="center">
+        <Box maxW="100vw" overflowX="hidden" paddingX={["3", "8", "0", "0"]}>
+          <Flex
+            // border="solid blue 1px"
+            direction="column"
+            align="center"
+            justify="center"
+          >
             <Flex
               maxW="100%"
               minW="100%"
