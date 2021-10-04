@@ -6,11 +6,18 @@ import linkbase_phone2 from "../../public/images/linkbase_phone2.png";
 
 const IphoneRenders = () => {
   return (
-    <Box mb="2rem">
+    <Box
+      mb="2rem"
+      display="flex"
+      //some
+      justifyContent="center"
+      border="solid red 1px"
+    >
       <Box
         display="inline-flex"
         position="relative"
-        left={["-20px", "-20px", "0px", "0px", "0px"]}
+        border="solid blue 1px"
+        // left={["-20px", "-20px", "0px", "0px", "0px"]}
       >
         <Flex
           maxW="240px"

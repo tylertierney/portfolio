@@ -8,7 +8,7 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <section>
+    <>
       <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem" }}>
         Projects
       </BrandedHeading>
@@ -27,7 +27,7 @@ const Projects = () => {
       {data.projects.map((item, index) => {
         return <Project key={index} item={item} />;
       })}
-    </section>
+    </>
   );
 };
 

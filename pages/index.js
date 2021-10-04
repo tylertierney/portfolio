@@ -13,30 +13,19 @@ const Index = () => {
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
 
-  // const handleScroll = {
-  //   projects: () => {
-  //     const refHeight = projectsRef.current.offsetTop;
-
-  //       window.document.body.scrollTo({
-  //         top: refHeight - 75,
-  //         left: 0,
-  //         behavior: "smooth",
-  //       })
-
-  //   },
-  // };
-
   const handleScroll = (ref) => {
     const refHeight = ref.current.offsetTop;
-    console.log(ref);
-    // window.document.body.scrollTo({
-    //   top: refHeight - 75,
-    //   left: 0,
-    //   behavior: "smooth",
-    // });
-    window.document.body.scrollTo(0, 1000);
-    console.log(window);
+
+    window.scrollTo({
+      top: refHeight - 75,
+      left: 0,
+      behavior: "smooth",
+    });
   };
+
+  if (window) {
+    console.log(window.scrollY);
+  }
 
   return (
     <>
@@ -54,43 +43,28 @@ const Index = () => {
           contactRef={contactRef}
           projectsRef={projectsRef}
         />
-
-        <Box maxW="100vw" overflowX="hidden" paddingX={["3", "8", "0", "0"]}>
+        <Flex w="100%" align="center" direction="column">
           <Flex
-            // border="solid blue 1px"
+            w="100vw"
+            maxW={["100vw", "1200px"]}
             direction="column"
-            align="center"
-            justify="center"
+            align="flex-start"
+            pt="2rem"
+            paddingX="1rem"
           >
-            <Flex
-              maxW="100%"
-              minW="100%"
-              w="100%"
-              direction={["column", "column", "column", "row"]}
-              justify={["flex-start", "flex-start", "space-around"]}
-            >
-              <Flex
-                direction="column"
-                p={[
-                  "2rem 2rem 0 2rem",
-                  "2rem 2rem 0 2rem",
-                  "2rem 2rem 0 2rem",
-                  "2rem",
-                ]}
-              >
-                <About />
-                <div ref={projectsRef}>
-                  <Projects />
-                </div>
-                <div ref={contactRef}>
-                  <Contact />
-                </div>
-              </Flex>
-            </Flex>
-            <br />
+            {/* <Box border="solid green 1px" paddingY="2rem"> */}
+            <About />
+            <section ref={projectsRef}>
+              <Projects />
+            </section>
+            <section ref={contactRef}>
+              <Contact />
+            </section>
+            {/* </Box> */}
           </Flex>
-        </Box>
-        <Footer />
+          <Footer />
+        </Flex>
+        {/* </Box> */}
       </main>
     </>
   );

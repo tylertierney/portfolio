@@ -31,6 +31,7 @@ const BrandedInput = ({ name, props, isLoading, state, type }) => {
       ) : (
         <InputGroup>
           <Input
+            autoComplete="on"
             color={textColor}
             value={state.value}
             onChange={state.onChange}

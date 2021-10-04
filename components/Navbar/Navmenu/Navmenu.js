@@ -9,7 +9,7 @@ const Navmenu = ({
 }) => {
   const menuItems = [
     { name: "Projects", ref: projectsRef },
-    { name: "Experience", ref: experienceRef },
+    // { name: "Experience", ref: experienceRef },
     { name: "Contact", ref: contactRef },
   ];
 
@@ -27,17 +27,16 @@ const Navmenu = ({
       color="brand.text.dark"
       h="100%"
       w="90%"
-      justify="space-around"
+      justify="flex-start"
     >
       {menuItems.map((item, index) => {
         return (
           <Flex
             transition="0.4s ease-in-out"
             fontSize={["0.8rem", "0.9rem", "1rem"]}
-            paddingX={["0.2rem", "0.8rem", "1.2rem"]}
+            paddingX={["0.6rem", "0.8rem", "1.2rem"]}
             cursor="pointer"
             _hover={{
-              // backgroundColor: "brand.gray",
               color: "brand.primary.1000",
             }}
             justify="center"

@@ -5,6 +5,8 @@ import MobileScreenshots from "../MobileScreenshots";
 import IphoneRenders from "../IphoneRenders/IphoneRenders";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import Link from "next/link";
+import Image from "next/image";
+import iphone_mockups from "../../public/images/iphone_mockups.png";
 
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { BsLightningFill, BsArrowUpRight } from "react-icons/bs";
@@ -141,7 +143,14 @@ const Project = ({ item, index }) => {
           </Flex>
         </Flex>
         {item.title === "LinkBase" ? (
-          <IphoneRenders />
+          // <IphoneRenders />
+          <Box maxW="480px">
+            <Image
+              src={iphone_mockups}
+              alt="LinkBase iPhone Renders"
+              priority={true}
+            />
+          </Box>
         ) : (
           <MobileScreenshots local_url={item.local_url} />
         )}

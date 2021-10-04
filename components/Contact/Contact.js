@@ -62,8 +62,7 @@ const Contact = () => {
   const marginBottom = successOrError ? "0rem" : "2rem";
 
   return (
-    <section>
-      {/* <button onClick={() => setSuccessOrError("error")}>asdf</button> */}
+    <>
       <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem" }}>
         Contact
       </BrandedHeading>
@@ -80,8 +79,20 @@ const Contact = () => {
         ...
       </BrandedHeading>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <Flex w="100%" justify="center">
-          <VStack w="100%" spacing={6} maxW="600px">
+        <Flex
+          w="100vw"
+          justify="center"
+          pb="2rem"
+          // minW={["98vw", "98vw", "560px"]}
+
+          //sa'lofjasld;fj
+        >
+          <VStack
+            // w="100%"
+            spacing={6}
+            maxW="600px"
+            w="75%"
+          >
             {successOrError && (
               <Flex direction="column" align="center">
                 {successOrError === "success" ? (
@@ -93,8 +104,8 @@ const Contact = () => {
                       fontSize="2rem"
                     />
                     <Text maxW="400px" textAlign="center">
-                      Success! Your email has been received. I'll be in touch
-                      within the next few days.
+                      Success! Your email has been received. I&apos;ll be in
+                      touch within the next few days.
                     </Text>
                   </>
                 ) : (
@@ -152,7 +163,7 @@ const Contact = () => {
           </VStack>
         </Flex>
       </form>
-    </section>
+    </>
   );
 };
 

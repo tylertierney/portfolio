@@ -18,7 +18,8 @@ const Footer = () => {
   return (
     <footer style={{ width: "100vw" }}>
       <Flex
-        w="100%"
+        // w="100%"
+        minW="100vw"
         h="200px"
         backgroundColor="brand.gray"
         minH="200px"
