@@ -1,7 +1,7 @@
 import Logo from "../Logo/Logo";
 
 import { Flex } from "@chakra-ui/react";
-import NavbarControls from "../NavbarControls/NavbarControls";
+import NavbarControls from "./NavbarControls/NavbarControls";
 
 import { useState } from "react";
 import Navmenu from "./Navmenu/Navmenu";

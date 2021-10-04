@@ -9,6 +9,7 @@ import {
   Alert,
   AlertIcon,
   Icon,
+  Box,
 } from "@chakra-ui/react";
 import BrandedHeading from "../BrandedHeading";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
@@ -63,21 +64,22 @@ const Contact = () => {
 
   return (
     <>
-      <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem" }}>
-        Contact
-      </BrandedHeading>
-      <BrandedHeading
-        props={{
-          color: "red",
-          lineHeight: "0.1rem",
-          mt: "-1rem",
-          mb: marginBottom,
-          pb: "1.5rem",
-          overflow: "visible",
-        }}
-      >
-        ...
-      </BrandedHeading>
+      <Box p="0 1.2rem">
+        <BrandedHeading props={{ p: "0rem 0rem", pb: "0.1rem" }}>
+          Contact
+        </BrandedHeading>
+        <BrandedHeading
+          props={{
+            color: "red",
+            lineHeight: "0.1rem",
+            mt: "-1rem",
+            mb: marginBottom,
+            pb: "1.5rem",
+          }}
+        >
+          ...
+        </BrandedHeading>
+      </Box>
       <form onSubmit={(e) => handleSubmit(e)}>
         <Flex
           w="100vw"

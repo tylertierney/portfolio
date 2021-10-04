@@ -1,6 +1,6 @@
 import { Flex } from "@chakra-ui/react";
-import ThemeSwitch from "../ThemeSwitch/ThemeSwitch";
-import Hamburger from "../Hamburger Icon/Hamburger";
+import ThemeSwitch from "../../ThemeSwitch/ThemeSwitch";
+import Hamburger from "../HamburgerIcon/Hamburger";
 
 const NavbarControls = ({ isNavmenuShowing, setNavmenuShowing, props }) => {
   return (

@@ -22,7 +22,7 @@ const About = () => {
           mt: "-1rem",
           mb: "0",
           pb: "1.5rem",
-          overflow: "visible",
+          // overflow: "visible",
         }}
       >
         ...

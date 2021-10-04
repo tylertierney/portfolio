@@ -6,7 +6,7 @@ import Home from "../components/Home/Home";
 import Head from "next/head";
 import Footer from "../components/Footer/Footer";
 import Contact from "../components/Contact/Contact";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 const Index = () => {
   const projectsRef = useRef(null);
@@ -17,15 +17,15 @@ const Index = () => {
     const refHeight = ref.current.offsetTop;
 
     window.scrollTo({
-      top: refHeight - 75,
+      top: refHeight,
       left: 0,
       behavior: "smooth",
     });
   };
 
-  if (window) {
-    console.log(window.scrollY);
-  }
+  useEffect(() => {
+    console.log(window.document.body);
+  }, []);
 
   return (
     <>
@@ -37,6 +37,7 @@ const Index = () => {
       </Head>
       <main>
         <Home />
+
         <Navbar
           handleScroll={handleScroll}
           experienceRef={experienceRef}
@@ -52,19 +53,16 @@ const Index = () => {
             pt="2rem"
             paddingX="1rem"
           >
-            {/* <Box border="solid green 1px" paddingY="2rem"> */}
             <About />
             <section ref={projectsRef}>
               <Projects />
             </section>
-            <section ref={contactRef}>
-              <Contact />
-            </section>
-            {/* </Box> */}
           </Flex>
+          <section ref={contactRef}>
+            <Contact />
+          </section>
           <Footer />
         </Flex>
-        {/* </Box> */}
       </main>
     </>
   );
