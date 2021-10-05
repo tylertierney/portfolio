@@ -1,16 +1,6 @@
 import BrandedInput from "../BrandedInput";
 import useInput from "../../hooks/useInput";
-import {
-  VStack,
-  FormControl,
-  FormErrorMessage,
-  Text,
-  Flex,
-  Alert,
-  AlertIcon,
-  Icon,
-  Box,
-} from "@chakra-ui/react";
+import { VStack, Text, Flex, Icon, Box } from "@chakra-ui/react";
 import BrandedHeading from "../BrandedHeading";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import axios from "axios";
@@ -51,7 +41,6 @@ const Contact = () => {
     setIsLoading(false);
   };
   const handleError = (err) => {
-    setSuccess(false);
     setSuccessOrError("error");
     name.value = "";
     email.value = "";
