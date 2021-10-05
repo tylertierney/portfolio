@@ -96,7 +96,6 @@ const Index = () => {
               <Contact />
             </section>
           </Flex>
-
           <Footer />
         </Flex>
       </main>
