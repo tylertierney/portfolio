@@ -1,6 +1,6 @@
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
-import { Flex, Box } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import Navbar from "../components/Navbar/Navbar";
 import Home from "../components/Home/Home";
 import Head from "next/head";

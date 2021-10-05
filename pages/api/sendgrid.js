@@ -6,8 +6,8 @@ async function sendEmail(req, res) {
   try {
     console.log(req.body);
     await sendgrid.send({
-      to: "tytierney@yahoo.com", // Your email where you'll receive emails
-      from: "ttierney32@gmail.com", // your website email address here
+      to: "tytierney@yahoo.com",
+      from: "ttierney32@gmail.com",
       subject: `${req.body.subject}`,
       html: `
       <div>
