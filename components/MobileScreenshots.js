@@ -2,10 +2,6 @@ import { Flex } from "@chakra-ui/react";
 
 import Image from "next/image";
 
-import MobileScreenshot1 from "../public/images/mobile-screenshot1.png";
-import MobileScreenshot2 from "../public/images/mobile-screenshot2.png";
-import MobileScreenshot3 from "../public/images/mobile-screenshot3.png";
-
 import facilitytracker_mobile from "../public/images/screenshots/facilitytracker_mobile.png";
 import facilitytracker_mobile2 from "../public/images/screenshots/facilitytracker_mobile2.png";
 import facilitytracker_mobile3 from "../public/images/screenshots/facilitytracker_mobile3.png";
@@ -29,35 +25,21 @@ const screenshots = {
 const MobileScreenshots = ({ local_url }) => {
   return (
     <Flex justify="space-around" align="center" w="100%" mb="2rem" maxW="400px">
-      <Flex
-        w="30%"
-        className="screenshots"
-        mt="8%"
-        // something
-      >
+      <Flex w="30%" className="screenshots" mt="8%">
         <Image
           alt="App screenshot"
           src={screenshots[local_url][0]}
           className="screenshots borderRadius"
         />
       </Flex>
-      <Flex
-        w="30%"
-        className="screenshots"
-        mt="4%"
-        //something
-      >
+      <Flex w="30%" className="screenshots" mt="4%">
         <Image
           alt="App screenshot"
           src={screenshots[local_url][1]}
           className="screenshots borderRadius"
         />
       </Flex>
-      <Flex
-        w="30%"
-        className="screenshots"
-        //some
-      >
+      <Flex w="30%" className="screenshots">
         <Image
           alt="App screenshot"
           src={screenshots[local_url][2]}

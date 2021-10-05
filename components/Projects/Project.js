@@ -2,7 +2,6 @@ import { Flex, Text, Icon, Box, useColorModeValue } from "@chakra-ui/react";
 import BrandedSubheading from "../BrandedSubheading";
 import BrandedParagraph from "../BrandedParagraph";
 import MobileScreenshots from "../MobileScreenshots";
-import IphoneRenders from "../IphoneRenders/IphoneRenders";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import Link from "next/link";
 import Image from "next/image";
@@ -143,7 +142,6 @@ const Project = ({ item, index }) => {
           </Flex>
         </Flex>
         {item.title === "LinkBase" ? (
-          // <IphoneRenders />
           <Box maxW="480px">
             <Image
               src={iphone_mockups}

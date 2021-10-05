@@ -80,7 +80,10 @@ const Contact = () => {
           ...
         </BrandedHeading>
       </Box>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form
+        onSubmit={(e) => handleSubmit(e)}
+        style={{ display: "flex", justifyContent: "center" }}
+      >
         <Flex
           w="100vw"
           justify="center"

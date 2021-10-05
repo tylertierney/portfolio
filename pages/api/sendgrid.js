@@ -5,14 +5,20 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 async function sendEmail(req, res) {
   try {
     console.log(req.body);
-    // await sendgrid.send({
-    //   to: "tytierney@yahoo.com", // Your email where you'll receive emails
-    //   from: "ttierney32@gmail.com", // your website email address here
-    //   subject: `${req.body.subject}`,
-    //   html: `<div><p>You've got mail from ${req.body.email}.</p><p>Message: ${req.body.message}</p></div>`,
-    // });
+    await sendgrid.send({
+      to: "tytierney@yahoo.com", // Your email where you'll receive emails
+      from: "ttierney32@gmail.com", // your website email address here
+      subject: `${req.body.subject}`,
+      html: `
+      <div>
+      <h2>Someone filled out the contact form on tylertierney.com</h2>
+      <p>Sender: ${req.body.email}.</p>
+      <p>Subject: ${req.body.subject}</p>
+      <p>Message: ${req.body.message}</p>
+      </div>`,
+    });
   } catch (error) {
-    // console.log(error);
+    console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
   }
 

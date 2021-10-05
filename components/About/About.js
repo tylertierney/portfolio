@@ -6,6 +6,8 @@ import { Flex, useColorModeValue, Text } from "@chakra-ui/react";
 
 import theme from "../theme.js";
 
+import Link from "next/link";
+
 const About = () => {
   const bgGradientColor = useColorModeValue(
     theme.colors.brand.white,
@@ -22,7 +24,6 @@ const About = () => {
           mt: "-1rem",
           mb: "0",
           pb: "1.5rem",
-          // overflow: "visible",
         }}
       >
         ...
@@ -41,20 +42,28 @@ const About = () => {
           worked in local advertising as well as commercial real estate.
         </BrandedParagraph>
         <Flex w="100%" mb="2rem" align="center" justify="flex-end">
-          <Text
-            mr="0.8rem"
-            cursor="pointer"
-            transition="0.3s ease-in-out"
-            _hover={{ opacity: "0.7" }}
-            borderColor={useColorModeValue("gray.500", "brand.text.light")}
-            borderBottom="solid 1px"
-            color={useColorModeValue("gray.500", "brand.text.light")}
-          >
-            LinkedIn
-          </Text>
-          <BrandedOutlineBtn props={{ color: "blue" }}>
-            Resumé
-          </BrandedOutlineBtn>
+          <Link href="https://www.linkedin.com/in/tyler--tierney/" passHref>
+            <a target="_blank">
+              <Text
+                mr="0.8rem"
+                cursor="pointer"
+                transition="0.3s ease-in-out"
+                _hover={{ opacity: "0.7" }}
+                borderColor={useColorModeValue("gray.500", "brand.text.light")}
+                borderBottom="solid 1px"
+                color={useColorModeValue("gray.500", "brand.text.light")}
+              >
+                LinkedIn
+              </Text>
+            </a>
+          </Link>
+          <Link href="/tierneyresume_21.pdf" passHref>
+            <a target="_blank">
+              <BrandedOutlineBtn props={{ color: "blue" }}>
+                Resumé
+              </BrandedOutlineBtn>
+            </a>
+          </Link>
         </Flex>
       </Flex>
     </section>

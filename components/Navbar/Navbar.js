@@ -6,49 +6,47 @@ import NavbarControls from "./NavbarControls/NavbarControls";
 import { useState } from "react";
 import Navmenu from "./Navmenu/Navmenu";
 
-const Navbar = ({ handleScroll, projectsRef, experienceRef, contactRef }) => {
+const Navbar = ({
+  handleScroll,
+  projectsRef,
+  experienceRef,
+  contactRef,
+  position,
+  top,
+}) => {
   const [isNavmenuShowing, setNavmenuShowing] = useState(false);
 
   return (
-    <nav
-      style={{
-        boxShadow: "0px 0px 20px 1px rgb(0, 0, 0, 0.3)",
-        position: "sticky",
-        maxWidth: "100vw",
-        top: "0vh",
-        zIndex: 2,
-        width: "100vw",
-      }}
+    <Flex
+      bgColor="brand.white"
+      align="center"
+      justify="space-between"
+      w="100%"
+      h="7vh"
+      pl="1rem"
+      pr="1.5rem"
     >
-      <Flex
-        bgColor="brand.white"
-        align="center"
-        justify="space-between"
-        w="100%"
-        h="7vh"
-        paddingX="1rem"
-      >
-        {isNavmenuShowing ? (
-          <Navmenu
-            experienceRef={experienceRef}
-            contactRef={contactRef}
-            projectsRef={projectsRef}
-            handleScroll={handleScroll}
-            isNavmenuShowing={isNavmenuShowing}
-          />
-        ) : (
-          <Logo
-            props={{ color: "brand.text.dark" }}
-            isNavmenuShowing={isNavmenuShowing}
-          />
-        )}
-        <NavbarControls
-          // props={{ border: "solid red 1px" }}
+      {isNavmenuShowing ? (
+        <Navmenu
+          experienceRef={experienceRef}
+          contactRef={contactRef}
+          projectsRef={projectsRef}
+          handleScroll={handleScroll}
           isNavmenuShowing={isNavmenuShowing}
-          setNavmenuShowing={setNavmenuShowing}
         />
-      </Flex>
-    </nav>
+      ) : (
+        <Logo
+          props={{ color: "brand.text.dark" }}
+          isNavmenuShowing={isNavmenuShowing}
+        />
+      )}
+      <NavbarControls
+        // props={{ border: "solid red 1px" }}
+        isNavmenuShowing={isNavmenuShowing}
+        setNavmenuShowing={setNavmenuShowing}
+      />
+    </Flex>
+    // </nav>
   );
 };
 

@@ -13,8 +13,30 @@ import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
 import BrandedHeading from "../BrandedHeading";
+import { useRef, useEffect } from "react";
 
 const Home = () => {
+  useEffect(() => {
+    // If user is on a mobile device, reveal the icon labels on scroll
+    const vh = window.innerHeight;
+    const topThird = vh / 3;
+    const middleThird = topThird * 2;
+
+    if (window.innerWidth < 600) {
+      window.addEventListener("scroll", () => {
+        const iconsScreenPosition =
+          iconsRef.current.getBoundingClientRect().top;
+        if (iconsScreenPosition < middleThird && iconsScreenPosition > 20) {
+          iconsRef.current.classList.add("iconScrollEffect");
+        } else {
+          iconsRef.current.classList.remove("iconScrollEffect");
+        }
+      });
+    }
+  }, []);
+
+  const iconsRef = useRef(null);
+
   const iconColor = useColorModeValue("brand.text.dark", "brand.white");
 
   const waves = useColorModeValue("waves", "waves2");
@@ -53,7 +75,6 @@ const Home = () => {
         w="100%"
         justify="flex-end"
         paddingX="1rem"
-        // mb="auto"
         opacity="0.3"
         paddingY="0.5rem"
       >
@@ -96,7 +117,7 @@ const Home = () => {
           </Text>
         </Flex>
       </VStack>
-      <Flex justify="space-around" w="100%" color="brand.gray">
+      <Flex justify="space-around" w="100%" color="brand.gray" ref={iconsRef}>
         {icons.map((item, index) => {
           return (
             <Flex
@@ -114,9 +135,7 @@ const Home = () => {
                     as={item.icon}
                     boxSize={8}
                     className="homeIcons"
-                    // cursor="pointer"
                     transition="0.3s ease-in-out"
-                    // _hover={{ transform: "scale(1.5)" }}
                   />
                 </a>
               </Link>
