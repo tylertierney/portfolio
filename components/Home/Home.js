@@ -1,18 +1,10 @@
-import {
-  Flex,
-  Text,
-  Icon,
-  useColorModeValue,
-  VStack,
-  Heading,
-} from "@chakra-ui/react";
+import { Flex, Text, Icon, useColorModeValue, VStack } from "@chakra-ui/react";
 import Link from "next/link";
 import Image from "next/image";
-import headshot from "../../public/images/headshot.jpg";
+
 import { AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiFileText } from "react-icons/fi";
-import BrandedHeading from "../BrandedHeading";
 import { useRef, useEffect } from "react";
 
 const Home = () => {
