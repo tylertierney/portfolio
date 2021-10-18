@@ -6,6 +6,7 @@ import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import Link from "next/link";
 import Image from "next/image";
 import iphone_mockups from "../../public/images/iphone_mockups.png";
+import movieworm_iphone_mockups from "../../public/images/movieworm_iphone_mockups.png";
 
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { BsLightningFill, BsArrowUpRight } from "react-icons/bs";
@@ -17,6 +18,7 @@ import {
   SiNetlify,
   SiHeroku,
   SiFirebase,
+  SiAuth0,
 } from "react-icons/si";
 
 const icons = {
@@ -60,6 +62,10 @@ const icons = {
     SiFirebase,
     color: "#ffcb2d",
   },
+  SiAuth0: {
+    SiAuth0,
+    color: "#eb5423",
+  },
 };
 
 const Project = ({ item, index }) => {
@@ -81,7 +87,6 @@ const Project = ({ item, index }) => {
               mt: "0",
               mb: "1rem",
               fontSize: "1rem",
-              // maxW: "650px",
             }}
           >
             {item.description}
@@ -141,10 +146,14 @@ const Project = ({ item, index }) => {
             </Flex>
           </Flex>
         </Flex>
-        {item.title === "LinkBase" ? (
+        {item.title === "LinkBase" || item.title === "MovieWorm" ? (
           <Box maxW="480px">
             <Image
-              src={iphone_mockups}
+              src={
+                item.title === "LinkBase"
+                  ? iphone_mockups
+                  : movieworm_iphone_mockups
+              }
               alt="LinkBase iPhone Renders"
               priority={true}
             />

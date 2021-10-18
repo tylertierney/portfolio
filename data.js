@@ -101,6 +101,39 @@ const data = {
   ],
   projects: [
     {
+      title: "MovieWorm",
+      description:
+        "MovieWorm is a platform where users can create private groups, invite friends, and share movie reviews and ratings.",
+      hostedsite: "https://movieworm.netlify.app/",
+      github: "https://github.com/tylertierney/movieworm",
+      desktop_screenshot: "public/images/screenshots/linkbase_desktop.png",
+      mobile_screenshot: "public/images/screenshots/linkbase_mobile.png",
+      mobile_screenshot2: "public/images/screenshots/linkbase_mobile2.png",
+      local_url: "movieworm",
+      tech_stack: [
+        {
+          name: "React",
+          icon: "FaReact",
+        },
+        {
+          name: "Chakra UI",
+          icon: "BsLightningFill",
+        },
+        {
+          name: "Node JS",
+          icon: "FaNodeJs",
+        },
+        {
+          name: "MongoDB",
+          icon: "SiMongodb",
+        },
+        {
+          name: "Auth0",
+          icon: "SiAuth0",
+        },
+      ],
+    },
+    {
       title: "LinkBase",
       description:
         "LinkBase began as my introduction to Next.js. The project is a full-stack social media platform. User authentication is provided by Netlify Identity, database operations are managed through MongoDB, and image storage is provided by Amazon S3. The frontend uses Chakra UI in tandem with Next JS to provide server-side rendering, static page generation, and dynamic routing. All backend operations are written using Node JS.",
