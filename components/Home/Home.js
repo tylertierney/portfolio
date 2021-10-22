@@ -46,7 +46,7 @@ const Home = () => {
     },
     {
       icon: FiFileText,
-      link: "/tierneyresume_21.pdf",
+      link: "/TierneyResume_Oct2021.pdf",
       name: "Resumé",
     },
   ];

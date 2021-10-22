@@ -57,7 +57,7 @@ const About = () => {
               </Text>
             </a>
           </Link>
-          <Link href="/tierneyresume_21.pdf" passHref>
+          <Link href="/TierneyResume_Oct2021.pdf" passHref>
             <a target="_blank">
               <BrandedOutlineBtn props={{ color: "blue" }}>
                 Resumé
