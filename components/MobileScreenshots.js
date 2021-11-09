@@ -27,6 +27,7 @@ const MobileScreenshots = ({ local_url }) => {
     <Flex justify="space-around" align="center" w="100%" mb="2rem" maxW="400px">
       <Flex w="30%" className="screenshots" mt="8%">
         <Image
+          priority={true}
           alt="App screenshot"
           src={screenshots[local_url][0]}
           className="screenshots borderRadius"
@@ -34,6 +35,7 @@ const MobileScreenshots = ({ local_url }) => {
       </Flex>
       <Flex w="30%" className="screenshots" mt="4%">
         <Image
+          priority={true}
           alt="App screenshot"
           src={screenshots[local_url][1]}
           className="screenshots borderRadius"
@@ -41,6 +43,7 @@ const MobileScreenshots = ({ local_url }) => {
       </Flex>
       <Flex w="30%" className="screenshots">
         <Image
+          priority={true}
           alt="App screenshot"
           src={screenshots[local_url][2]}
           className="screenshots borderRadius"

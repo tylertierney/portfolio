@@ -177,7 +177,7 @@ const data = {
     {
       title: "Real Estate Dashboard",
       description:
-        "This site provides a facility management and project tracking dashboard for commercial real estate managers working with outside firms. The firm enters data into an excel sheet and uploads the JSON-ified version to the site. The site transforms datapoints like important dates, timelines, relevant messages, and facility info into an actionable interface for their clients to view as a quick point of reference.",
+        "This site provides a facility management and project tracking dashboard for commercial real estate managers working with outside firms. The firm enters data into an excel sheet and uploads the JSON stringified version to the site. The site transforms datapoints like important dates, timelines, relevant messages, and facility info into an actionable interface for their clients to view as a quick point of reference.",
       hostedsite: "https://tylertierney.github.io/facilitytracker/",
       github: "https://github.com/tylertierney/facilitytracker",
       desktop_screenshot:
@@ -242,6 +242,8 @@ const data = {
       desktop_screenshot: "public/images/screenshots/ecommerce_desktop.png",
       mobile_screenshot: "public/images/screenshots/ecommerce_mobile.jpg",
       mobile_screenshot2: "public/images/screenshots/ecommerce_mobile2.jpg",
+      // mobile_screenshot2:
+      //   "https://s3.us-east-2.amazonaws.com/movieworm/ecommerce_mobile3.png",
       local_url: "ecommerce",
       tech_stack: [],
     },
