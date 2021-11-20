@@ -5,6 +5,8 @@ import data from "../../data.js";
 import NewProject from "./NewProject/NewProject";
 import { SmallProjectCard } from "@tylertierney/smallprojectcard";
 
+import { useState } from "react";
+
 const Projects = () => {
   const getProjectsArray = (projectsArray) => {
     return projectsArray.map((project, index) => {
@@ -34,15 +36,13 @@ const Projects = () => {
     });
   };
 
+  const isDark = useColorModeValue(false, true);
+
   const getSmallProjectsArray = (projects) => {
     return projects.map((project, index) => {
       return (
-        <Flex margin="1rem">
-          <SmallProjectCard
-            key={index}
-            project={project}
-            isDarkMode={useColorModeValue(false, true)}
-          />
+        <Flex margin="1rem" key={index}>
+          <SmallProjectCard project={project} isDarkMode={isDark} />
         </Flex>
       );
     });

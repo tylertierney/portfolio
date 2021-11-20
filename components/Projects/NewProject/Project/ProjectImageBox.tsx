@@ -15,7 +15,13 @@ const ProjectImageBox: React.FC<ImageBoxProps> = ({ project, imageType }) => {
     const maxWidth = "90%";
 
     if (imageType === "featured") {
-      return <Image src={project.featured_image} maxW={maxWidth} />;
+      return (
+        <Image
+          alt={project.title}
+          src={project.featured_image}
+          maxW={maxWidth}
+        />
+      );
     }
     return <MobileScreenshots project={project} />;
   };
