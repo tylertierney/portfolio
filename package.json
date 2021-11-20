@@ -14,7 +14,7 @@
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
     "@sendgrid/mail": "^7.4.7",
-    "@tylertierney/smallprojectcard": "^1.0.6",
+    "@tylertierney/smallprojectcard": "^1.0.7",
     "@types/react": "^17.0.34",
     "axios": "^0.21.4",
     "framer-motion": "^4.1.17",
