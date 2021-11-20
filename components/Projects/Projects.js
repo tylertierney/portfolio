@@ -70,6 +70,7 @@ const Projects = () => {
         direction={["column", "column", "row"]}
         justify="center"
         align="center"
+        wrap="wrap"
       >
         {getSmallProjectsArray(data.smallProjects)}
       </Flex>
