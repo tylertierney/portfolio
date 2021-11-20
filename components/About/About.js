@@ -1,5 +1,4 @@
 import BrandedHeading from "../BrandedHeading";
-import BrandedSubheading from "../BrandedSubheading";
 import BrandedParagraph from "../BrandedParagraph";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import { Flex, useColorModeValue, Text } from "@chakra-ui/react";

@@ -256,6 +256,50 @@ const data = {
       color: "#A895DA",
     },
   ],
+  smallProjects: [
+    {
+      title: "Job Tracker",
+      description:
+        "This is a list component for tracking submitted job applications. If a user provides a link to the LinkedIn job posting, the site will scrape the page for the associated job description.",
+      hostedsite: "https://application-tracker123.herokuapp.com/",
+      desktop_screenshot: "/images/screenshots/applicationtracker_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "applicationtracker",
+      tech_stack: [],
+      color: "#4cccd7",
+    },
+    {
+      title: "Startpage",
+      description:
+        "I used CSS Grid and React to create a simple homepage for all of my browsing activity. The page includes a dynamic greeting message, date and time, random quotes, Google search, and easily-clickable links to my most-used websites.",
+      hostedsite: "https://tylertierney.github.io/startpage/",
+      desktop_screenshot: "/images/screenshots/startpage_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "startpage",
+      tech_stack: [],
+      color: "#7ce9d6",
+    },
+    {
+      title: "Landing Page",
+      description:
+        "This is a fictional product landing page. Created with the purpose of testing out responsive design patterns and serving as a boilerplate Next.js project.",
+      hostedsite: "https://condescending-morse-95f608.netlify.app/",
+      desktop_screenshot: "/images/screenshots/landingpage_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "landingpage",
+      tech_stack: [],
+      color: "#e43535",
+    },
+  ],
 };
 
 export default data;
