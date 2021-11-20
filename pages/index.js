@@ -89,7 +89,15 @@ const Index = () => {
             <section style={{ width: "100%" }}>
               <About />
             </section>
-            <section style={{ width: "100%" }} ref={projectsRef}>
+            <section
+              style={{
+                width: "100%",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+              ref={projectsRef}
+            >
               <Projects />
             </section>
             <section style={{ width: "100%" }} ref={contactRef}>

@@ -41,7 +41,7 @@ const Projects = () => {
   const getSmallProjectsArray = (projects) => {
     return projects.map((project, index) => {
       return (
-        <Flex margin="1rem" key={index}>
+        <Flex padding={["1rem 0rem", "1rem 0rem", "1rem"]} key={index}>
           <SmallProjectCard project={project} isDarkMode={isDark} />
         </Flex>
       );
@@ -50,7 +50,7 @@ const Projects = () => {
 
   return (
     <>
-      <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem" }}>
+      <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem", width: "100%" }}>
         Projects
       </BrandedHeading>
       <BrandedHeading
@@ -61,6 +61,7 @@ const Projects = () => {
           mb: "0",
           pb: "1.5rem",
           overflow: "visible",
+          width: "100%",
         }}
       >
         ...
