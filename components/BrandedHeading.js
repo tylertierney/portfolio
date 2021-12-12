@@ -19,11 +19,8 @@ const BrandedHeading = ({ children, props }) => {
       size={props?.size ? props.size : "2xl"}
       bgGradient={bgGradient}
       bgClip="text"
-      // maxW="480px"
       mb="0.9rem"
       {...props}
-      // textAlign="center"
-      // p="0.3rem 0"
     >
       {children}
     </Heading>

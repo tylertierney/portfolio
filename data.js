@@ -258,6 +258,21 @@ const data = {
   ],
   smallProjects: [
     {
+      title: "Battleship",
+      description:
+        "The classic board game, built with React and TypeScript. See if you can beat the computer!",
+      hostedsite: "https://tylertierney.github.io/battleship/",
+      desktop_screenshot: "/images/screenshots/battleship_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "battleship",
+      tech_stack: [],
+      color: "#ff9982",
+    },
+
+    {
       title: "Job Tracker",
       description:
         "This is a list component for tracking submitted job applications. If a user provides a link to the LinkedIn job posting, the site will scrape the page for the associated job description.",
