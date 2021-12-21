@@ -10,15 +10,14 @@ const ThemeSwitch = () => {
       name="Dark Theme Toggle"
       icon={
         colorMode === "light" ? (
-          <MoonIcon color="brand.text.dark" />
+          <MoonIcon color="inherit" />
         ) : (
-          <SunIcon color="brand.text.dark" />
+          <SunIcon color="inherit" />
         )
       }
       display="flex"
       alignItems="center"
       onClick={toggleColorMode}
-      color="black"
       variant="unstyled"
       _focus={{ outline: "none" }}
     />

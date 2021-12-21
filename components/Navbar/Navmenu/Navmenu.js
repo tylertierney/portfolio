@@ -1,4 +1,5 @@
 import { Flex } from "@chakra-ui/react";
+import { useColorModeValue } from "@chakra-ui/react";
 
 const Navmenu = ({
   handleScroll,
@@ -21,10 +22,12 @@ const Navmenu = ({
     animation = "slideaway";
   }
 
+  const menuItemsColor = useColorModeValue("brand.text.dark", "brand.white");
+
   return (
     <Flex
       animation={`${animation} 0.3s ease-in-out forwards`}
-      color="brand.text.dark"
+      color="inherit"
       h="100%"
       w="90%"
       justify="flex-start"

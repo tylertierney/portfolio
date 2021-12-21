@@ -6,6 +6,8 @@ import NavbarControls from "./NavbarControls/NavbarControls";
 import { useState } from "react";
 import Navmenu from "./Navmenu/Navmenu";
 
+import { useColorModeValue } from "@chakra-ui/react";
+
 const Navbar = ({
   handleScroll,
   projectsRef,
@@ -16,9 +18,13 @@ const Navbar = ({
 }) => {
   const [isNavmenuShowing, setNavmenuShowing] = useState(false);
 
+  const logoColor = useColorModeValue("brand.text.dark", "brand.white");
+  const navBgColor = useColorModeValue("brand.white", "#181f27");
+
   return (
     <Flex
-      bgColor="brand.white"
+      bgColor={navBgColor}
+      color={logoColor}
       align="center"
       justify="space-between"
       w="100%"
@@ -35,18 +41,13 @@ const Navbar = ({
           isNavmenuShowing={isNavmenuShowing}
         />
       ) : (
-        <Logo
-          props={{ color: "brand.text.dark" }}
-          isNavmenuShowing={isNavmenuShowing}
-        />
+        <Logo isNavmenuShowing={isNavmenuShowing} />
       )}
       <NavbarControls
-        // props={{ border: "solid red 1px" }}
         isNavmenuShowing={isNavmenuShowing}
         setNavmenuShowing={setNavmenuShowing}
       />
     </Flex>
-    // </nav>
   );
 };
 

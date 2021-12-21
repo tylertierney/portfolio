@@ -4,14 +4,7 @@ import Hamburger from "../HamburgerIcon/Hamburger";
 
 const NavbarControls = ({ isNavmenuShowing, setNavmenuShowing, props }) => {
   return (
-    <Flex
-      align="center"
-      justify="space-around"
-      h="100%"
-      w="20%"
-      maxW="100px"
-      {...props}
-    >
+    <Flex align="center" justify="space-around" h="100%" w="20%" maxW="100px">
       <ThemeSwitch />
       <Hamburger
         isNavmenuShowing={isNavmenuShowing}
