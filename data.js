@@ -258,6 +258,19 @@ const data = {
   ],
   smallProjects: [
     {
+      title: "Connect 4",
+      description: "My first Angular project!",
+      hostedsite: "https://tylertierney.github.io/connectfour/",
+      desktop_screenshot: "/images/screenshots/connectfour_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "connectfour",
+      tech_stack: [],
+      color: "#88ce66",
+    },
+    {
       title: "Battleship",
       description:
         "The classic board game, built with React and TypeScript. See if you can beat the computer!",
