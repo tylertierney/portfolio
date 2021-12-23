@@ -150,3 +150,17 @@ body {
   transition: 0.4s ease-in-out;
   opacity: 1;
 }
+
+.paragraph {
+  font-weight: 200;
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.sectionHeaderDots {
+  line-height: 0.1rem;
+  margin-top: -1rem;
+  margin-bottom: 0;
+  padding-bottom: 1.5rem;
+}

@@ -1,11 +1,8 @@
-import BrandedHeading from "../BrandedHeading";
-import { Flex, Text, useColorModeValue } from "@chakra-ui/react";
+import { Flex, useColorModeValue, Heading } from "@chakra-ui/react";
 import data from "../../data.js";
 
 import NewProject from "./NewProject/NewProject";
 import { SmallProjectCard } from "@tylertierney/smallprojectcard";
-
-import { useState } from "react";
 
 const Projects = () => {
   const getProjectsArray = (projectsArray) => {
@@ -50,22 +47,12 @@ const Projects = () => {
 
   return (
     <>
-      <BrandedHeading props={{ p: "0rem 0", pb: "0.1rem", width: "100%" }}>
-        Projects
-      </BrandedHeading>
-      <BrandedHeading
-        props={{
-          color: "red",
-          lineHeight: "0.1rem",
-          mt: "-1rem",
-          mb: "0",
-          pb: "1.5rem",
-          overflow: "visible",
-          width: "100%",
-        }}
-      >
-        ...
-      </BrandedHeading>
+      <Flex direction="column" width="100%">
+        <Heading size="2xl">Projects</Heading>
+        <Heading size="2xl" className="sectionHeaderDots" color="red.400">
+          ...
+        </Heading>
+      </Flex>
       {getProjectsArray(data.projects)}
       <Flex
         direction={["column", "column", "row"]}

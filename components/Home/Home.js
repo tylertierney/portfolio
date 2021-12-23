@@ -79,35 +79,34 @@ const Home = () => {
           </a>
         </Link>
       </Flex>
-      <VStack userSelect="none">
-        <Flex direction="column" align="center" justify="space-around">
+      <VStack userSelect="none" p="20px">
+        <Text
+          animation="headingReveal 0.6s linear forwards"
+          fontSize="2.2rem"
+          fontWeight="100"
+          textAlign="center"
+        >
+          Hey, how&apos;s it going?
+        </Text>
+        <br />
+        <Text
+          animation="headingReveal 0.6s linear forwards"
+          textAlign="center"
+          maxW="75%"
+          fontSize="2.2rem"
+          fontWeight="100"
+        >
+          My name is&nbsp;
           <Text
-            animation="headingReveal 0.6s linear forwards"
-            fontSize="2.2rem"
-            fontWeight="100"
+            bgClip="text"
+            fontWeight="600"
+            bgGradient="linear(to-r, red.400,pink.400)"
+            as="span"
           >
-            Hey, how&apos;s it going?
+            Tyler
           </Text>
-          <br />
-          <Text
-            animation="headingReveal 0.6s linear forwards"
-            textAlign="center"
-            maxW="75%"
-            fontSize="2.2rem"
-            fontWeight="100"
-          >
-            My name is&nbsp;
-            <Text
-              bgClip="text"
-              fontWeight="600"
-              bgGradient="linear(to-r, red.400,pink.400)"
-              as="span"
-            >
-              Tyler
-            </Text>
-            &nbsp;and I build websites
-          </Text>
-        </Flex>
+          &nbsp;and I build websites
+        </Text>
       </VStack>
       <Flex justify="space-around" w="100%" color="brand.gray" ref={iconsRef}>
         {icons.map((item, index) => {

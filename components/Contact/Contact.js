@@ -1,7 +1,14 @@
 import BrandedInput from "../BrandedInput";
 import useInput from "../../hooks/useInput";
-import { VStack, Text, Flex, Icon, Box } from "@chakra-ui/react";
-import BrandedHeading from "../BrandedHeading";
+import {
+  VStack,
+  Text,
+  Flex,
+  Icon,
+  Heading,
+  useColorModeValue,
+  Button,
+} from "@chakra-ui/react";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
 import axios from "axios";
 import { AiOutlineCheckCircle, AiOutlineStop } from "react-icons/ai";
@@ -10,6 +17,8 @@ import Link from "next/link";
 import { useState } from "react";
 
 const Contact = () => {
+  const btnColor = useColorModeValue("gray.500", "brand.white");
+
   const [isLoading, setIsLoading] = useState(false);
   const [successOrError, setSuccessOrError] = useState("");
 
@@ -49,44 +58,22 @@ const Contact = () => {
     setIsLoading(false);
   };
 
-  const marginBottom = successOrError ? "0rem" : "2rem";
+  // const marginBottom = successOrError ? "0rem" : "2rem";
 
   return (
     <>
-      <Box p="0 1.2rem">
-        <BrandedHeading props={{ p: "0rem 0rem", pb: "0.1rem" }}>
-          Contact
-        </BrandedHeading>
-        <BrandedHeading
-          props={{
-            color: "red",
-            lineHeight: "0.1rem",
-            mt: "-1rem",
-            mb: marginBottom,
-            pb: "1.5rem",
-          }}
-        >
+      <Flex direction="column" width="100%">
+        <Heading size="2xl">Contact</Heading>
+        <Heading size="2xl" className="sectionHeaderDots" color="red.400">
           ...
-        </BrandedHeading>
-      </Box>
+        </Heading>
+      </Flex>
       <form
         onSubmit={(e) => handleSubmit(e)}
         style={{ display: "flex", justifyContent: "center" }}
       >
-        <Flex
-          w="100vw"
-          justify="center"
-          pb="2rem"
-          // minW={["98vw", "98vw", "560px"]}
-
-          //sa'lofjasld;fj
-        >
-          <VStack
-            // w="100%"
-            spacing={6}
-            maxW="600px"
-            w="75%"
-          >
+        <Flex w="100vw" justify="center" pb="2rem">
+          <VStack spacing={6} maxW="600px" w="75%">
             {successOrError && (
               <Flex direction="column" align="center">
                 {successOrError === "success" ? (
@@ -128,7 +115,7 @@ const Contact = () => {
             <BrandedInput
               isLoading={isLoading}
               state={name}
-              name="Full Name"
+              name="Name"
               type="text"
             />
             <BrandedInput
@@ -150,9 +137,21 @@ const Contact = () => {
               type="textarea"
             />
             <Flex w="100%" justify="flex-end">
-              <BrandedOutlineBtn type="submit" isLoading={isLoading}>
+              <Button
+                type="submit"
+                variant="outline"
+                borderRadius="30px"
+                color={btnColor}
+                border="2px solid"
+                borderColor="brand.primary.1000"
+                transition="0.2s ease-in-out"
+                _hover={{
+                  backgroundColor: "brand.primary.1000",
+                  color: "white",
+                }}
+              >
                 Submit
-              </BrandedOutlineBtn>
+              </Button>
             </Flex>
           </VStack>
         </Flex>

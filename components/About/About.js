@@ -1,45 +1,31 @@
-import BrandedHeading from "../BrandedHeading";
-import BrandedParagraph from "../BrandedParagraph";
 import BrandedOutlineBtn from "../BrandedOutlineBtn";
-import { Flex, useColorModeValue, Text } from "@chakra-ui/react";
+import {
+  Flex,
+  useColorModeValue,
+  Text,
+  Heading,
+  Button,
+} from "@chakra-ui/react";
 
 import theme from "../theme.js";
 
 import Link from "next/link";
 
 const About = () => {
-  const bgGradientColor = useColorModeValue(
-    theme.colors.brand.white,
-    theme.colors.gray["700"]
-  );
+  const btnColor = useColorModeValue("gray.500", "brand.white");
 
   return (
     <section>
-      <BrandedHeading props={{ p: "0rem 0" }}>About</BrandedHeading>
-      <BrandedHeading
-        props={{
-          color: "red",
-          lineHeight: "0.1rem",
-          mt: "-1rem",
-          mb: "0",
-          pb: "1.5rem",
-        }}
-      >
+      <Heading size="2xl">About</Heading>
+      <Heading size="2xl" className="sectionHeaderDots" color="red.400">
         ...
-      </BrandedHeading>
+      </Heading>
       <Flex maxW="600px" direction="column">
-        <BrandedParagraph
-          props={{
-            fontWeight: "200",
-            mt: "0",
-            mb: "1rem",
-            fontSize: "1.2rem",
-          }}
-        >
+        <Text className="paragraph">
           My name is Tyler Tierney and I am a frontend developer based out of
           Tampa, Fl. I graduated from the University of Florida in 2019 and have
           worked in local advertising as well as commercial real estate.
-        </BrandedParagraph>
+        </Text>
         <Flex w="100%" mb="2rem" align="center" justify="flex-end">
           <Link href="https://www.linkedin.com/in/tyler--tierney/" passHref>
             <a target="_blank">
@@ -58,9 +44,23 @@ const About = () => {
           </Link>
           <Link href="/TylerTierney_Resume.pdf" passHref>
             <a target="_blank">
-              <BrandedOutlineBtn props={{ color: "blue" }}>
+              {/* <BrandedOutlineBtn props={{ color: "blue" }}>
                 Resumé
-              </BrandedOutlineBtn>
+              </BrandedOutlineBtn> */}
+              <Button
+                variant="outline"
+                borderRadius="30px"
+                color={btnColor}
+                border="2px solid"
+                borderColor="brand.primary.1000"
+                transition="0.3s ease-in-out"
+                _hover={{
+                  backgroundColor: "brand.primary.1000",
+                  color: "white",
+                }}
+              >
+                Resumé
+              </Button>
             </a>
           </Link>
         </Flex>

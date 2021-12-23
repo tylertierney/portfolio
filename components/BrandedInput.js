@@ -22,11 +22,11 @@ const BrandedInput = ({ name, props, isLoading, state, type }) => {
     <FormControl isRequired id={name} isDisabled={isLoading}>
       {type === "textarea" ? (
         <Textarea
-          _focus={{ outline: "none" }}
           placeholder={name}
           color={textColor}
           value={state.value}
           onChange={state.onChange}
+          borderColor={textColor}
         />
       ) : (
         <InputGroup>
@@ -39,8 +39,10 @@ const BrandedInput = ({ name, props, isLoading, state, type }) => {
             placeholder={name}
             name={name}
             id={name}
-            _focus={{ outline: "none" }}
+            // _focus={{ outline: "none" }}
             {...props}
+            borderColor={textColor}
+            _hover={{ borderColor: textColor }}
           />
           {type === "password" && (
             <InputRightElement>
