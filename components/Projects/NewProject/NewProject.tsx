@@ -21,11 +21,6 @@ export interface ProjectInterface {
 }
 
 export interface ProjectProps {
-  /**
-   * Project object has 12 properties: title (string), description (string), hostedsite (url), github (url),
-   * desktop_screenshot (url), mobile_screenshot (url), mobile_screenshot2 (url), mobile_screenshot3 (url),
-   * featured_image (url), local_url, tech_stack (array), and color (string)
-   */
   project: ProjectInterface;
   orientation: string;
   imageType: string;
@@ -52,7 +47,6 @@ const Project: React.FC<ProjectProps> = ({
       _hover={{ filter: "brightness(100%)" }}
       marginY="2rem"
       {...props}
-      // outline={useColorModeValue("none", "3px solid white")}
       border={useColorModeValue("none", "3px solid white")}
     >
       {orientation === "infoFirst" ? (

@@ -12,7 +12,11 @@ const Projects = () => {
         orientation = "imageFirst";
       }
 
-      if (project.title === "MovieWorm" || project.title === "LinkBase") {
+      if (
+        project.title === "MovieWorm" ||
+        project.title === "LinkBase" ||
+        project.title === "Custom Homepage"
+      ) {
         return (
           <NewProject
             key={index}

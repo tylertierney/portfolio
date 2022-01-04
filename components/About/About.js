@@ -44,9 +44,6 @@ const About = () => {
           </Link>
           <Link href="/TylerTierney_Resume.pdf" passHref>
             <a target="_blank">
-              {/* <BrandedOutlineBtn props={{ color: "blue" }}>
-                Resumé
-              </BrandedOutlineBtn> */}
               <Button
                 variant="outline"
                 borderRadius="30px"

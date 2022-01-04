@@ -137,6 +137,21 @@ const data = {
       color: "#ffa3a3",
     },
     {
+      title: "Custom Homepage",
+      description:
+        "This app, built entirely with Angular, provides a simple interface that allows users to generate and customize a browser homepage. Users can edit bookmarks, change the appearance and colors of the page, update their info, and select from a number of wallpapers.",
+      hostedsite: "https://tylertierney.github.io/angular-startpage/",
+      github: "https://github.com/tylertierney/angular-startpage",
+      desktop_screenshot: "",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "/images/startpage_iphone_mockups.png",
+      local_url: "startpage",
+      tech_stack: [{ name: "Angular", icon: "FaAngular" }],
+      color: "#A895DA",
+    },
+    {
       title: "LinkBase",
       description:
         "LinkBase began as my introduction to Next.js. The project is a full-stack social media platform. User authentication is provided by Netlify Identity, database operations are managed through MongoDB, and image storage is provided by Amazon S3. The frontend uses Chakra UI in tandem with Next JS to provide server-side rendering, static page generation, and dynamic routing. All backend operations are written using Node JS.",
@@ -240,21 +255,6 @@ const data = {
       ],
       color: "#FFBB5C",
     },
-    {
-      title: "eCommerce",
-      description:
-        "This eCommerce project was one of my first React applications. Functionality is limited as there are no database connections; this site was simply an opportunity to explore React hooks and develop a frontend.",
-      hostedsite: "https://tylertierney.github.io/eCommerce/",
-      github: "https://github.com/tylertierney/eCommerce",
-      desktop_screenshot: "/images/screenshots/ecommerce_desktop.png",
-      mobile_screenshot: "/images/screenshots/ecommerce_mobile.png",
-      mobile_screenshot2: "/images/screenshots/ecommerce_mobile2.png",
-      mobile_screenshot3: "/images/screenshots/ecommerce_mobile3.png",
-      featured_image: "",
-      local_url: "ecommerce",
-      tech_stack: [],
-      color: "#A895DA",
-    },
   ],
   smallProjects: [
     {
@@ -326,6 +326,20 @@ const data = {
       local_url: "landingpage",
       tech_stack: [],
       color: "#e43535",
+    },
+    {
+      title: "eCommerce",
+      description:
+        'An eCommerce "frontend" from my very early days learning React.',
+      hostedsite: "https://tylertierney.github.io/eCommerce/",
+      desktop_screenshot: "/images/screenshots/ecommerce_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "ecommerce",
+      tech_stack: [],
+      color: "#A895DA",
     },
   ],
 };

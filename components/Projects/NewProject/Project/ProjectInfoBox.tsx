@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaAws, FaAngular } from "react-icons/fa";
 import { AiOutlineMail, AiFillGithub } from "react-icons/ai";
 import { BsArrowUpRight, BsLightningFill } from "react-icons/bs";
 
@@ -74,6 +74,10 @@ const ProjectInfoBox: React.FC<InfoBoxProps> = ({ project }) => {
     SiAuth0: {
       SiAuth0,
       color: "#eb5423",
+    },
+    FaAngular: {
+      FaAngular,
+      color: "#dd0031",
     },
   };
 
@@ -158,7 +162,7 @@ const ProjectInfoBox: React.FC<InfoBoxProps> = ({ project }) => {
               borderRadius="20px"
               color={textColor}
               fontWeight="normal"
-              border="1px solid"
+              border="2px solid"
               borderColor={project.color}
               maxW="128px"
               minW="112px"
