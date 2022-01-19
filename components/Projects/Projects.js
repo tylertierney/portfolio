@@ -15,7 +15,8 @@ const Projects = () => {
       if (
         project.title === "MovieWorm" ||
         project.title === "LinkBase" ||
-        project.title === "Custom Homepage"
+        project.title === "Custom Homepage" ||
+        project.title === "Chord Finder"
       ) {
         return (
           <NewProject

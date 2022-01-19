@@ -137,6 +137,34 @@ const data = {
       color: "#ffa3a3",
     },
     {
+      title: "Chord Finder",
+      description:
+        "Enter guitar notes on a virtual fretboard and identify the associated chord. Built using React, Typescript, and Nextjs.",
+      hostedsite: "https://loving-roentgen-d16f15.netlify.app/",
+      github: "https://github.com/tylertierney/chordfinder",
+      desktop_screenshot: "",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "/images/chordfinder_iphone_mockups.png",
+      local_url: "chordfinder",
+      tech_stack: [
+        {
+          name: "React",
+          icon: "FaReact",
+        },
+        {
+          name: "Chakra UI",
+          icon: "BsLightningFill",
+        },
+        {
+          name: "Next.js",
+          icon: "SiNextDotJs",
+        },
+      ],
+      color: "#78DD78",
+    },
+    {
       title: "Custom Homepage",
       description:
         "This app, built entirely with Angular, provides a simple interface that allows users to generate and customize a browser homepage. Users can edit bookmarks, change the appearance and colors of the page, update their info, and select from a number of wallpapers.",
@@ -194,30 +222,6 @@ const data = {
         },
       ],
       color: "#1e90d6",
-    },
-    {
-      title: "Real Estate Dashboard",
-      description:
-        "This site provides a facility management and project tracking dashboard for commercial real estate managers working with outside firms. The firm enters data into an excel sheet and uploads the JSON stringified version to the site. The site transforms datapoints like important dates, timelines, relevant messages, and facility info into an actionable interface for their clients to view as a quick point of reference.",
-      hostedsite: "https://tylertierney.github.io/facilitytracker/",
-      github: "https://github.com/tylertierney/facilitytracker",
-      desktop_screenshot: "/images/screenshots/facilitytracker_desktop.png",
-      mobile_screenshot: "/images/screenshots/facilitytracker_mobile.png",
-      mobile_screenshot2: "/images/screenshots/facilitytracker_mobile2.png",
-      mobile_screenshot3: "/images/screenshots/facilitytracker_mobile3.png",
-      featured_image: "",
-      local_url: "facilitytracker",
-      tech_stack: [
-        {
-          name: "React",
-          icon: "FaReact",
-        },
-        {
-          name: "Chakra UI",
-          icon: "BsLightningFill",
-        },
-      ],
-      color: "#83c5be",
     },
     {
       title: "The Scoop",
@@ -326,6 +330,20 @@ const data = {
       local_url: "landingpage",
       tech_stack: [],
       color: "#e43535",
+    },
+    {
+      title: "CRE Dashboard",
+      description:
+        "This tool provides a dashboard for CRE brokers to manage ongoing projects.",
+      hostedsite: "https://tylertierney.github.io/facilitytracker/",
+      desktop_screenshot: "/images/screenshots/facilitytracker_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "facilitytracker",
+      tech_stack: [],
+      color: "#00dcff",
     },
     {
       title: "eCommerce",
