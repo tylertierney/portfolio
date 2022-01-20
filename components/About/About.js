@@ -23,8 +23,13 @@ const About = () => {
       <Flex maxW="600px" direction="column">
         <Text className="paragraph">
           My name is Tyler Tierney and I am a frontend developer based out of
-          Tampa, Fl. I graduated from the University of Florida in 2019 and have
-          worked in local advertising as well as commercial real estate.
+          Tampa, Fl. I graduated from the University of Florida in 2019.
+        </Text>
+        <Text className="paragraph">
+          Since graduating, I have worked as an Account Executive in local
+          marketing and advertising and as a Revenue Operations Manager in
+          commercial real estate. Currently, I develop financial technology
+          products for Fortune 500 clients working in risk and compliance.
         </Text>
         <Flex w="100%" mb="2rem" align="center" justify="flex-end">
           <Link href="https://www.linkedin.com/in/tyler--tierney/" passHref>

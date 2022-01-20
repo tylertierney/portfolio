@@ -140,7 +140,7 @@ const data = {
       title: "Chord Finder",
       description:
         "Enter guitar notes on a virtual fretboard and identify the associated chord. Built using React, Typescript, and Nextjs.",
-      hostedsite: "https://loving-roentgen-d16f15.netlify.app/",
+      hostedsite: "https://www.chordfinder.us/",
       github: "https://github.com/tylertierney/chordfinder",
       desktop_screenshot: "",
       mobile_screenshot: "",
