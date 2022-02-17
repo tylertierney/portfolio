@@ -101,10 +101,54 @@ const data = {
   ],
   projects: [
     {
+      title: "Chatmosphere",
+      description:
+        "Chatmosphere is an instant messaging platform. Users can sign-in securely via email/password, Github authentication, or anonymously.",
+      hostedsite: "https://chatmosphere.us",
+      github: "https://github.com/tylertierney/chatapp",
+      desktop_screenshot: "",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "/images/chatmosphere_iphone_mockups.png",
+      local_url: "chatmosphere",
+      tech_stack: [
+        {
+          name: "React",
+          icon: "FaReact",
+        },
+        {
+          name: "Chakra UI",
+          icon: "BsLightningFill",
+        },
+        {
+          name: "Node JS",
+          icon: "FaNodeJs",
+        },
+        {
+          name: "Heroku",
+          icon: "SiHeroku",
+        },
+        {
+          name: "Firebase",
+          icon: "SiFirebase",
+        },
+        {
+          name: "Socket.IO",
+          icon: "SiSocketDotIo",
+        },
+        {
+          name: "Netlify",
+          icon: "SiNetlify",
+        },
+      ],
+      color: "#97e4f0",
+    },
+    {
       title: "MovieWorm",
       description:
         "MovieWorm is a platform where users can create private groups, invite friends, and share movie reviews and ratings.",
-      hostedsite: "https://movieworm.netlify.app/",
+      hostedsite: "https://movieworm.io",
       github: "https://github.com/tylertierney/movieworm",
       desktop_screenshot: "",
       mobile_screenshot: "",

@@ -21,6 +21,7 @@ import {
   SiHeroku,
   SiFirebase,
   SiAuth0,
+  SiSocketDotIo,
 } from "react-icons/si";
 
 import { ProjectInterface } from "../NewProject";
@@ -79,6 +80,10 @@ const ProjectInfoBox: React.FC<InfoBoxProps> = ({ project }) => {
       FaAngular,
       color: "#dd0031",
     },
+    SiSocketDotIo: {
+      SiSocketDotIo,
+      color: "#fff",
+    },
   };
 
   const { title, description, color } = project;
@@ -122,6 +127,8 @@ const ProjectInfoBox: React.FC<InfoBoxProps> = ({ project }) => {
             textAlign="left"
             fontSize="2.2rem"
             fontWeight="bold"
+            lineHeight={1}
+            pb="0.7rem"
           >
             {title}
           </Heading>

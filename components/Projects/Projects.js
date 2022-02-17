@@ -16,7 +16,8 @@ const Projects = () => {
         project.title === "MovieWorm" ||
         project.title === "LinkBase" ||
         project.title === "Custom Homepage" ||
-        project.title === "Chord Finder"
+        project.title === "Chord Finder" ||
+        project.title === "Chatmosphere"
       ) {
         return (
           <NewProject
