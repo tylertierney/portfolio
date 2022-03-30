@@ -306,6 +306,20 @@ const data = {
   ],
   smallProjects: [
     {
+      title: "Wordle Clone",
+      description:
+        "A clone of the popular New York Times game, Wordle. Built with React and Typescript.",
+      hostedsite: "https://imaginative-griffin-b54662.netlify.app/",
+      desktop_screenshot: "/images/screenshots/wordle_desktop.png",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "",
+      local_url: "wordle",
+      tech_stack: [],
+      color: "#7ce9d6",
+    },
+    {
       title: "Connect 4",
       description: "My first Angular project!",
       hostedsite: "https://tylertierney.github.io/connectfour/",
