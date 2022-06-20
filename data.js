@@ -101,6 +101,42 @@ const data = {
   ],
   projects: [
     {
+      title: "Kadoodle",
+      description:
+        "Kadoodle is a multiplayer drawing game. Players create a lobby, invite friends, and take turns drawing and guessing to score points. Kadoodle also supports group video chat.",
+      hostedsite: "https://kadoodle.us",
+      github: "https://github.com/tylertierney/kadoodle",
+      desktop_screenshot: "",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "/images/kadoodle_iphone_mockups.png",
+      local_url: "kadoodle",
+      tech_stack: [
+        {
+          name: "React",
+          icon: "FaReact",
+        },
+        {
+          name: "Node JS",
+          icon: "FaNodeJs",
+        },
+        {
+          name: "Heroku",
+          icon: "SiHeroku",
+        },
+        {
+          name: "Socket.IO",
+          icon: "SiSocketDotIo",
+        },
+        {
+          name: "Netlify",
+          icon: "SiNetlify",
+        },
+      ],
+      color: "#ffaa7c",
+    },
+    {
       title: "Chatmosphere",
       description:
         "Chatmosphere is an instant messaging platform. Users can sign-in securely via email/password, Github authentication, or anonymously.",
@@ -145,6 +181,34 @@ const data = {
       color: "#97e4f0",
     },
     {
+      title: "Chord Finder",
+      description:
+        "Enter guitar notes on a virtual fretboard and identify the associated chord. Built using React, Typescript, and Nextjs.",
+      hostedsite: "https://www.chordfinder.us/",
+      github: "https://github.com/tylertierney/chordfinder",
+      desktop_screenshot: "",
+      mobile_screenshot: "",
+      mobile_screenshot2: "",
+      mobile_screenshot3: "",
+      featured_image: "/images/chordfinder_iphone_mockups.png",
+      local_url: "chordfinder",
+      tech_stack: [
+        {
+          name: "React",
+          icon: "FaReact",
+        },
+        {
+          name: "Chakra UI",
+          icon: "BsLightningFill",
+        },
+        {
+          name: "Next.js",
+          icon: "SiNextDotJs",
+        },
+      ],
+      color: "#78DD78",
+    },
+    {
       title: "MovieWorm",
       description:
         "MovieWorm is a platform where users can create private groups, invite friends, and share movie reviews and ratings.",
@@ -179,34 +243,6 @@ const data = {
         },
       ],
       color: "#ffa3a3",
-    },
-    {
-      title: "Chord Finder",
-      description:
-        "Enter guitar notes on a virtual fretboard and identify the associated chord. Built using React, Typescript, and Nextjs.",
-      hostedsite: "https://www.chordfinder.us/",
-      github: "https://github.com/tylertierney/chordfinder",
-      desktop_screenshot: "",
-      mobile_screenshot: "",
-      mobile_screenshot2: "",
-      mobile_screenshot3: "",
-      featured_image: "/images/chordfinder_iphone_mockups.png",
-      local_url: "chordfinder",
-      tech_stack: [
-        {
-          name: "React",
-          icon: "FaReact",
-        },
-        {
-          name: "Chakra UI",
-          icon: "BsLightningFill",
-        },
-        {
-          name: "Next.js",
-          icon: "SiNextDotJs",
-        },
-      ],
-      color: "#78DD78",
     },
     {
       title: "Custom Homepage",
