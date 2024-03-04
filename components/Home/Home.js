@@ -67,7 +67,7 @@ const Home = () => {
         w="100%"
         justify="flex-end"
         paddingX="1rem"
-        opacity="0.3"
+        opacity="1"
         paddingY="0.5rem"
       >
         <Link href="mailto:tytierney@yahoo.com" passHref>
