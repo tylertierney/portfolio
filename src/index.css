@@ -1,38 +1,91 @@
 :root {
   font-size: 16px;
   font-family: "Bitter", serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  color: var(--text);
-
-  --text: #2d2f4c;
-  --accent: #ff8666;
-  --primary: #8fb4ff;
-  --secondary: #c9d1e5;
-  --secondary-background: #f4f7ff;
-  --background: #ffffff;
 }
 
 body {
-  padding: 1rem;
+  overflow-x: hidden;
   margin: 0;
+  color: var(--text);
+  --text: #2d2f4c;
+  /* --accent: #ff8666; */
+  --accent: #ff5f5f;;
+  /* --primary: #8fb4ff; */
+  --primary: #3e7eff;
+  --secondary: #c9d1e5;
+  --secondary-background: #f4f7ff;
+  --background: #ffffff;
+
+  background: var(--background);
 }
 
-.header {
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  position: relative;
+body.dark-theme {
+  --text: #ffffff;
+  --background: #111821;
+}
 
-  p {
-    font-size: 1.5rem;
+nav {
+  padding: 1rem 1.5rem 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  button {
+    border: 2px solid var(--text);
+    border-radius: 50%;
+    background: var(--background);
+    font-size: 1.2rem;
+    padding: 0.2rem;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px color-mix(in srgb, var(--secondary) 75%, var(--background));
+
+    svg {
+      width: 30px;
+      height: 30px;
+
+      path, circle {
+        stroke: var(--text);
+        fill: var(--text);
+      }
+
+      &.sun {
+        display: none;
+      }
+
+      &.moon {
+        display: flex;
+      }
+    }
   }
+}
+
+.dark-theme {
+  nav {
+    button {
+      svg {
+        &.sun {
+          display: flex;
+        }
+  
+        &.moon {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.header, section {
+  padding: 0 1rem;
 }
 
 p {
   font-size: 1.25rem;
   max-width: 36rem;
+  line-height: 1.5;
 }
 
 .blurred-blob {
@@ -40,7 +93,6 @@ p {
   width: 25rem;
   height: 25rem;
   background: color-mix(in srgb, var(--accent) 50%, var(--background));
-  /* background: var(--accent); */
   border-radius: 50%;
   filter: blur(100px);
   z-index: -1;
@@ -56,22 +108,6 @@ p {
 h1 {
   font-weight: normal;
   font-size: 2rem;
-}
-
-.intro {
-  padding: 0 1rem;
-
-  /* h1, p {
-    text-shadow: -1px -1px var(--secondary-background), 0 -1px var(--secondary-background), 1px -1px var(--secondary-background),
-    -1px 0 var(--secondary-background), 1px 0 var(--secondary-background), -1px 1px var(--secondary-background), 0 1px var(--secondary-background),
-    1px 1px var(--secondary-background), -2px -2px var(--secondary-background), 0 -2px var(--secondary-background), 2px -2px var(--secondary-background),
-    -2px 0 var(--secondary-background), 2px 0 var(--secondary-background), -2px 2px var(--secondary-background), 0 2px var(--secondary-background),
-    2px 2px var(--secondary-background), -3px -3px var(--secondary-background), 0 -3px var(--secondary-background), 3px -3px var(--secondary-background),
-    -3px 0 var(--secondary-background), 3px 0 var(--secondary-background), -3px 3px var(--secondary-background), 0 3px var(--secondary-background),
-    3px 3px var(--secondary-background), -4px -4px var(--secondary-background), 0 -4px var(--secondary-background), 4px -4px var(--secondary-background),
-    -4px 0 var(--secondary-background), 4px 0 var(--secondary-background), -4px 4px var(--secondary-background), 0 4px var(--secondary-background),
-    4px 4px var(--secondary-background);
-  } */
 }
 
 .dot {
@@ -99,12 +135,20 @@ h1 {
     position: absolute;
     width: 75%;
     height: 75%;
+    animation: blob-border-radius 20s ease-in-out infinite both alternate;
+  }
+  
+  .blob.primary {
+    background-color: var(--primary);
     top: 20%;
+    left: 5%;
   }
 
-  .blob {
-    background-color: var(--primary);
-    animation: blob-border-radius 20s ease-in-out infinite both alternate;
+  .blob.accent {
+    background-color: var(--accent);
+    top: 5%;
+    right: -5%;
+    rotate: 90deg;
   }
 }
 
@@ -127,17 +171,27 @@ h1 {
   }
 }
 
-section#about {
-  display: flex;
-  flex-direction: column;
-  max-width: 36rem;
+section {
+  position: relative;
 
-  button {
+  div.container {
+    max-width: 36rem;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+section#about {
+  .button {
     align-self: flex-end;
   }
 }
 
-button {
+section:last-of-type {
+  margin-bottom: 400px;
+}
+
+.button {
   position: relative;
   padding: 0.5rem 1rem;
   font-size: 1.125rem;
@@ -148,9 +202,10 @@ button {
   cursor: pointer;
   color: var(--text);
   user-select: none;
+  text-decoration: none;
 }
 
-button::after {
+.button::after {
   content: "";
   width: 100%;
   height: 100%;
@@ -161,28 +216,14 @@ button::after {
   z-index: -1;
   border-radius: 0.5rem;
   filter: blur(2px);
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
-button:hover::after {
+.button:hover::after {
   left: 0;
   top: 0;
   filter: blur(0);
 }
 
-
-@media screen and (min-width: 768px) {
-
-  .header {
-    flex-direction: row;
-    align-items: center;
-
-    .intro {
-      max-width: 36rem;
-    }
-  }
-
-
-}
 
 
