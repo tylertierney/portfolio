@@ -1,0 +1,188 @@
+:root {
+  font-size: 16px;
+  font-family: "Bitter", serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color: var(--text);
+
+  --text: #2d2f4c;
+  --accent: #ff8666;
+  --primary: #8fb4ff;
+  --secondary: #c9d1e5;
+  --secondary-background: #f4f7ff;
+  --background: #ffffff;
+}
+
+body {
+  padding: 1rem;
+  margin: 0;
+}
+
+.header {
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+p {
+  font-size: 1.25rem;
+  max-width: 36rem;
+}
+
+.blurred-blob {
+  position: absolute;
+  width: 25rem;
+  height: 25rem;
+  background: color-mix(in srgb, var(--accent) 50%, var(--background));
+  /* background: var(--accent); */
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: -1;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.intro {
+  padding: 0 1rem;
+
+  /* h1, p {
+    text-shadow: -1px -1px var(--secondary-background), 0 -1px var(--secondary-background), 1px -1px var(--secondary-background),
+    -1px 0 var(--secondary-background), 1px 0 var(--secondary-background), -1px 1px var(--secondary-background), 0 1px var(--secondary-background),
+    1px 1px var(--secondary-background), -2px -2px var(--secondary-background), 0 -2px var(--secondary-background), 2px -2px var(--secondary-background),
+    -2px 0 var(--secondary-background), 2px 0 var(--secondary-background), -2px 2px var(--secondary-background), 0 2px var(--secondary-background),
+    2px 2px var(--secondary-background), -3px -3px var(--secondary-background), 0 -3px var(--secondary-background), 3px -3px var(--secondary-background),
+    -3px 0 var(--secondary-background), 3px 0 var(--secondary-background), -3px 3px var(--secondary-background), 0 3px var(--secondary-background),
+    3px 3px var(--secondary-background), -4px -4px var(--secondary-background), 0 -4px var(--secondary-background), 4px -4px var(--secondary-background),
+    -4px 0 var(--secondary-background), 4px 0 var(--secondary-background), -4px 4px var(--secondary-background), 0 4px var(--secondary-background),
+    4px 4px var(--secondary-background);
+  } */
+}
+
+.dot {
+  font-size: 1.2em;
+  font-weight: bolder;
+  color: var(--primary);
+}
+
+.sectionHeading::after {
+  display: block;
+  content: "";
+  width: 100px;
+  height: 10px;
+  background-color: var(--accent);
+  position: relative;
+}
+
+.headerPicContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .blob {
+    position: absolute;
+    width: 75%;
+    height: 75%;
+    top: 20%;
+  }
+
+  .blob {
+    background-color: var(--primary);
+    animation: blob-border-radius 20s ease-in-out infinite both alternate;
+  }
+}
+
+@keyframes blob-border-radius {
+  0%,
+  100% {
+    border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%;
+  }
+  20% {
+    border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%;
+  }
+  40% {
+    border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%;
+  }
+  60% {
+    border-radius: 37% 63% 51% 49% / 30% 30% 70% 70%;
+  }
+  80% {
+    border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%;
+  }
+}
+
+section#about {
+  display: flex;
+  flex-direction: column;
+  max-width: 36rem;
+
+  button {
+    align-self: flex-end;
+  }
+}
+
+button {
+  position: relative;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  font-weight: bold;
+  background: none;
+  border: 3px solid var(--primary);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--text);
+  user-select: none;
+}
+
+button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 6px;
+  top: 6px;
+  background: rgba(182, 231, 255, 0.34);
+  position: absolute;
+  z-index: -1;
+  border-radius: 0.5rem;
+  filter: blur(2px);
+  transition: 0.2s;
+}
+
+button:hover::after {
+  left: 0;
+  top: 0;
+  filter: blur(0);
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+
+    .intro {
+      max-width: 36rem;
+    }
+  }
+
+
+}
+
+
