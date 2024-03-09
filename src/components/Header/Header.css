@@ -1,6 +1,4 @@
 .header {
-
-  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -9,47 +7,63 @@
   gap: 2rem;
 
   .intro {
-    
     p {
       font-size: 1.5rem;
+      margin-bottom: 3rem;
     }
-
-    .icons {
-      display: flex;
-      gap: 4rem;
-  
-      .iconLink {
-        cursor: pointer;
-        width: 34px;
-  
-        path {
-          fill: var(--text);
-          stroke: var(--background);
-        }
-      }
-  
-      .iconLink:hover {
-        path {
-          fill: var(--primary);
-        }
-      }
-  
-      .iconLink:focus {
-        path {
-          fill: var(--primary);
-        }
-      }
-    }
-
   }
 }
 
-/* .dark-theme {
-  .icons {
-    justify-content: center;
-    gap: 6rem;
-  }
-} */
+div.icons {
+  display: flex;
+  gap: 4rem;
+}
+
+a.iconLink {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  color: var(--text);
+}
+
+a.iconLink path {
+  fill: var(--text);
+  stroke: var(--background);
+  transition: inherit;
+}
+
+.icons.iconScrollEffect .icon-label {
+  opacity: 1;
+}
+
+a.iconLink:hover,
+a.iconLink:focus {
+  color: var(--primary);
+}
+
+a.iconLink:hover path,
+a.iconLink:focus path {
+  fill: var(--primary);
+}
+
+a.iconLink:hover .icon-label,
+a.iconLink:focus .icon-label {
+  opacity: 1;
+}
+
+.icon-svg {
+  width: 34px;
+  transition: 0.3s;
+}
+
+.icon-label {
+  transition: inherit;
+  opacity: 0;
+  cursor: pointer;
+}
 
 @media screen and (min-width: 768px) {
   .header {
