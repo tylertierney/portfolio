@@ -97,7 +97,7 @@ export default function Header() {
             <span className="dot">.</span>
           </b>
         </h1>
-        <p>
+        <p className="intro-p">
           I am a <b>frontend developer</b> based in Tampa, Florida.
         </p>
         <div ref={iconsRef} className="icons">

@@ -1,33 +1,36 @@
 .nav {
   padding: 1rem 1.5rem 0 1.5rem;
-  position: sticky;
+  position: fixed;
   top: 0;
+  right: 0;
   z-index: 1;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  gap: 1rem;
+  --box-shadow: 0px 0px 5px 1px
+  color-mix(in srgb, var(--secondary) 75%, var(--background));
 
   .nav-btn {
     border: 2px solid var(--text);
-    border-radius: 50%;
+    display: flex;
     background: var(--background);
     font-size: 1.2rem;
     padding: 0.2rem;
     cursor: pointer;
-    box-shadow: 0px 0px 5px 1px
-      color-mix(in srgb, var(--secondary) 75%, var(--background));
+    /* box-shadow: var(--box-shadow); */
+    border-radius: 50%;
 
-    & .moon,
-    & .sun {
+     .moon,
+     .sun {
       width: 30px;
       height: 30px;
 
-      path,
-      circle {
+      .path,
+      .circle {
         stroke: var(--text);
         fill: var(--text);
       }
-
     }
     & .sun {
       display: none;
@@ -49,6 +52,28 @@
       & .moon {
         display: none;
       }
+    }
+  }
+}
+
+.contact-btn {
+  display: flex;
+  background: none;
+  color: var(--text);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  .mail {
+    width: 46px;
+    .path {
+      fill: var(--background);
+      stroke: var(--text);
+    }
+
+    .rect {
+      fill: var(--background);
+      stroke: var(--text);
     }
   }
 }

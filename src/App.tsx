@@ -9,19 +9,22 @@ function App() {
       <Navbar />
       <Header />
       <section id="about" className="about">
+        <div
+          style={{
+            right: "-16.5rem",
+            top: "12.5rem",
+          }}
+          className="blurred-blob"
+        ></div>
         <div className="container">
-          <div
-            style={{ right: "-16.5rem", top: "12.5rem" }}
-            className="blurred-blob"
-          ></div>
           <h1 className="sectionHeading">
             About me<span className="dot">.</span>
           </h1>
-          <p>
+          <p className="body-paragraph">
             My name is Tyler Tierney and I'm a frontend developer. I graduated
             from the University of Florida in 2019.
           </p>
-          <p>
+          <p style={{ marginBottom: "20px" }} className="body-paragraph">
             After graduation, I worked as an Account Executive in local
             advertising and then as a Revenue Operations Manager in commercial
             real estate. Nowadays, I spend my time writing code in order to
