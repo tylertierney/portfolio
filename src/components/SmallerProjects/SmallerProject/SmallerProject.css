@@ -1,0 +1,45 @@
+.smallerProject {
+  box-shadow: 0px 0px 5px 1px var(--text);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  border: 2px solid var(--text);
+  display: flex;
+  flex-direction: column;
+
+  .img {
+    object-fit: cover;
+    border-bottom: 2px solid var(--text);
+  }
+
+  .info {
+    background: var(--background);
+    padding: 0.5rem 1rem;
+
+    .title {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .description {
+      font-size: 1rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+
+      .button {
+        font-size: 1rem;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .smallerProject {
+    max-width: 360px;
+  }
+}

@@ -17,6 +17,8 @@ body {
   --secondary: #c9d1e5;
   --secondary-background: #f4f7ff;
   --background: #ffffff;
+  --green: rgba(34, 185, 34, 1);
+  --purple: rgb(234, 41, 231);
 
   background: var(--background);
 }
@@ -69,6 +71,12 @@ p {
   }
   &.accent {
     background: color-mix(in srgb, var(--accent) 50%, var(--background));
+  }
+  &.green {
+    background: color-mix(in srgb, var(--green) 50%, var(--background));
+  }
+  &.purple {
+    background: color-mix(in srgb, var(--purple) 50%, var(--background));
   }
 }
 
@@ -168,7 +176,7 @@ section:last-of-type {
   font-size: 1.125rem;
   font-weight: bold;
   background: var(--background);
-  border: 3px solid var(--primary);
+  border: 3px solid var(--text);
   border-radius: 0.5rem;
   cursor: pointer;
   color: var(--text);

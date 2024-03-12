@@ -1,5 +1,5 @@
 import "./Projects.css";
-import projects from "./projects";
+import projects from "../../projects";
 import Project from "./Project/Project";
 
 export default function Projects() {
@@ -17,15 +17,20 @@ export default function Projects() {
                 style={{
                   left: "-14rem",
                   top: "0px",
-                  // top: "90px",
                   opacity: 0.5,
                 }}
               ></div>
             )}
             {i === 2 && (
               <div
-                className="blurred-blob accent"
+                className="blurred-blob green"
                 style={{ right: "-14rem", top: "70%", opacity: 0.7 }}
+              ></div>
+            )}
+            {i === 3 && (
+              <div
+                className="blurred-blob purple"
+                style={{ left: "-14rem", top: "70%", opacity: 0.7 }}
               ></div>
             )}
           </Project>

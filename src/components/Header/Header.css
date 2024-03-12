@@ -6,7 +6,7 @@
   position: relative;
   gap: 2rem;
   min-height: 90vh;
-  margin: 3rem 0 2rem 0;
+  margin: 5rem 0 2rem 0;
 
   .intro {
     .intro-p {
@@ -69,6 +69,7 @@ a.iconLink:focus .icon-label {
 
 @media screen and (min-width: 768px) {
   .header {
+    margin-top: 3rem;
     flex-direction: row;
     align-items: center;
 
