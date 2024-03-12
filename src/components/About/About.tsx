@@ -16,7 +16,7 @@ export default function About() {
           My name is Tyler Tierney and I'm a frontend developer. I graduated
           from the University of Florida in 2019.
         </p>
-        <p style={{ marginBottom: "20px" }}>
+        <p className="body-paragraph" style={{ marginBottom: "20px" }}>
           After graduation, I worked as an Account Executive in local
           advertising and then as a Revenue Operations Manager in commercial
           real estate. Nowadays, I spend my time writing code in order to create

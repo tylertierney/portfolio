@@ -29,25 +29,8 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      color: var(--text);
       gap: 1.5rem;
-      margin-bottom: 1rem;
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0.4rem;
-        .icon {
-          width: 2rem;
-          height: 2rem;
-          display: flex;
-        }
-  
-        .name {
-          font-size: 0.9rem;
-        }
-      }
+      margin-bottom: 1.5rem;
 
     }
 

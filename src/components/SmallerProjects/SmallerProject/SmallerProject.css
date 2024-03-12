@@ -5,6 +5,7 @@
   border: 2px solid var(--text);
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   .img {
     object-fit: cover;
@@ -33,12 +34,16 @@
       .button {
         font-size: 1rem;
         padding: 0.5rem;
+
+        &:first-child:hover {
+          background: color-mix(in srgb, var(--green) 20%, var(--background));
+        }
       }
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 560px) {
   .smallerProject {
     max-width: 360px;
   }

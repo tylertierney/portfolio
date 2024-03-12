@@ -1,0 +1,60 @@
+import "./TechStackIcon.css";
+import {
+  amazonS3Icon,
+  angularIcon,
+  arrowIcon,
+  auth0Icon,
+  chakraIcon,
+  emailIcon,
+  firebaseIcon,
+  githubIcon,
+  herokuIcon,
+  mongoDbIcon,
+  netlifyIcon,
+  nextJsIcon,
+  nodeIcon,
+  reactIcon,
+  socketIoIcon,
+} from "../../../../icons/icons";
+import { useState } from "react";
+
+const techStackIcons = new Map<string, { icon: JSX.Element; color: string }>([
+  ["React", { icon: reactIcon, color: "#61dafb" }],
+  ["Node JS", { icon: nodeIcon, color: "#73aa63" }],
+  ["Heroku", { icon: herokuIcon, color: "#79589f" }],
+  ["Socket.IO", { icon: socketIoIcon, color: "var(--text)" }],
+  ["Netlify", { icon: netlifyIcon, color: "#74bece" }],
+  ["Chakra UI", { icon: chakraIcon, color: "#4dc8c3" }],
+  ["Firebase", { icon: firebaseIcon, color: "#ffcb2d" }],
+  ["Next.js", { icon: nextJsIcon, color: "var(--text)" }],
+  ["MongoDB", { icon: mongoDbIcon, color: "#12aa52" }],
+  ["Auth0", { icon: auth0Icon, color: "#eb5423" }],
+  ["Angular", { icon: angularIcon, color: "#dd0031" }],
+  ["Netlify Identity", { icon: netlifyIcon, color: "#74bece" }],
+  ["Amazon S3", { icon: amazonS3Icon, color: "#e08b2d" }],
+  ["SendGrid", { icon: emailIcon, color: "#61dafb" }],
+]);
+
+interface TechStackIconProps {
+  name: string;
+}
+
+export default function TechStackIcon({ name }: TechStackIconProps) {
+  const icon = techStackIcons.get(name)?.icon ?? reactIcon;
+
+  const [color, setColor] = useState("var(--text)");
+
+  const hoverColor = techStackIcons.get(name)?.color ?? "var(--text)";
+
+  return (
+    <div
+      onMouseEnter={() => setColor(hoverColor)}
+      onMouseLeave={() => setColor("var(--text)")}
+      style={{ color }}
+      className="techStackIcon"
+    >
+      <div className="icon">{icon}</div>
+      <span className="name">{name}</span>
+    </div>
+  );
+}
