@@ -14,7 +14,7 @@ function App() {
             right: "-16.5rem",
             top: "12.5rem",
           }}
-          className="blurred-blob"
+          className="blurred-blob accent"
         ></div>
         <div className="container">
           <h1 className="sectionHeading">
@@ -24,7 +24,7 @@ function App() {
             My name is Tyler Tierney and I'm a frontend developer. I graduated
             from the University of Florida in 2019.
           </p>
-          <p style={{ marginBottom: "20px" }} className="body-paragraph">
+          <p style={{ marginBottom: "20px" }}>
             After graduation, I worked as an Account Executive in local
             advertising and then as a Revenue Operations Manager in commercial
             real estate. Nowadays, I spend my time writing code in order to

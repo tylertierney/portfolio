@@ -63,6 +63,13 @@ p {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
+
+  &.primary {
+    background: color-mix(in srgb, var(--primary) 50%, var(--background));
+  }
+  &.accent {
+    background: color-mix(in srgb, var(--accent) 50%, var(--background));
+  }
 }
 
 h1 {

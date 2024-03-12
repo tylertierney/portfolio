@@ -40,6 +40,7 @@
         gap: 0.4rem;
         .icon {
           width: 2rem;
+          height: 2rem;
           display: flex;
         }
   

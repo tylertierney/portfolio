@@ -1,3 +1,4 @@
+import { PropsWithChildren } from "react";
 import { IProject } from "../projects";
 import "./Project.css";
 
@@ -250,7 +251,10 @@ interface ProjectProps {
   project: IProject;
 }
 
-export default function Project({ project }: ProjectProps) {
+export default function Project({
+  project,
+  children,
+}: PropsWithChildren<ProjectProps>) {
   return (
     <div className="project">
       <div className="info">
@@ -275,6 +279,7 @@ export default function Project({ project }: ProjectProps) {
           </a>
         </div>
       </div>
+      {children}
       <div className="images">
         <img className="featuredImage" src={project.featuredImage} />
       </div>
