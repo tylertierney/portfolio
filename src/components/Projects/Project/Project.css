@@ -5,6 +5,7 @@
   align-items: stretch;
   justify-content: space-around;
   gap: 2rem;
+  padding: 1rem 0;
 
   .info {
     display: flex;
@@ -14,12 +15,39 @@
     .title {
       font-size: 1.8rem;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin-bottom: 1rem;
     }
 
     .description {
       margin-top: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       font-size: 1.1rem;
+    }
+
+    .techStackIcons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      color: var(--text);
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+        .icon {
+          width: 2rem;
+          display: flex;
+        }
+  
+        .name {
+          font-size: 0.9rem;
+        }
+      }
+
     }
 
     .buttons {
@@ -34,11 +62,10 @@
         &:first-child:hover {
           background: color-mix(in srgb, rgba(34, 185, 34, 1) 20%, var(--background));
         }
-        &:first-child::after {
-          background: rgba(34, 185, 34, 0.347);
-        }
 
-        
+        &:first-child::after {
+          background: color-mix(in srgb, rgba(34, 185, 34, 1) 50%, white);
+        }        
       }
 
       

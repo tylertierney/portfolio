@@ -176,7 +176,7 @@ section:last-of-type {
   height: 100%;
   left: 6px;
   top: 6px;
-  background: rgba(0, 171, 255, 0.34);
+  background: color-mix(in srgb, rgba(0, 171, 255, 1) 50%, white);
   position: absolute;
   z-index: -1;
   border-radius: 0.5rem;
