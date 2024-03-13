@@ -39,20 +39,6 @@
       width: 100%;
       justify-content: flex-end;
       gap: 1rem;
-
-      .button {
-        border-color: var(--text);
-
-        &:first-child:hover {
-          background: color-mix(in srgb, rgba(34, 185, 34, 1) 20%, var(--background));
-        }
-
-        &:first-child::after {
-          background: color-mix(in srgb, rgba(34, 185, 34, 1) 50%, white);
-        }        
-      }
-
-      
     }
   }
 

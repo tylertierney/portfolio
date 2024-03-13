@@ -1,3 +1,5 @@
+import LinkButton from "../LinkButton/LinkButton";
+
 export default function About() {
   return (
     <section id="about" className="about">
@@ -22,13 +24,13 @@ export default function About() {
           real estate. Nowadays, I spend my time writing code in order to create
           websites for clients in the financial industry.
         </p>
-        <a
-          className="button"
+        <LinkButton
+          color="blue"
           href="/public/TylerTierney_Resume.pdf"
           target="_blank"
         >
           Get my résumé
-        </a>
+        </LinkButton>
       </div>
     </section>
   );

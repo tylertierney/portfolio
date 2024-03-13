@@ -225,3 +225,68 @@ export const emailIcon = (
     <path d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-40 110.8V792H136V270.8l-27.6-21.5 39.3-50.5 42.8 33.3h643.1l42.8-33.3 39.3 50.5-27.7 21.5zM833.6 232L512 482 190.4 232l-42.8-33.3-39.3 50.5 27.6 21.5 341.6 265.6a55.99 55.99 0 0 0 68.7 0L888 270.8l27.6-21.5-39.3-50.5-42.7 33.2z"></path>
   </svg>
 );
+
+export const sunIcon = (
+  <svg className="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path
+      className="path"
+      strokeLinecap="round"
+      strokeMiterlimit="10"
+      strokeWidth="32"
+      d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94"
+    />
+    <circle
+      className="circle"
+      cx="256"
+      cy="256"
+      r="80"
+      strokeLinecap="round"
+      strokeMiterlimit="10"
+      strokeWidth="32"
+    />
+  </svg>
+);
+
+export const moonIcon = (
+  <svg
+    className="moon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
+    <path
+      className="path"
+      d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="32"
+    />
+  </svg>
+);
+
+export const mailIcon = (
+  <svg
+    className="mail"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 512 512"
+  >
+    <rect
+      className="rect"
+      x="48"
+      y="96"
+      width="416"
+      height="320"
+      rx="40"
+      ry="40"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="32"
+    />
+    <path
+      className="path"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="32"
+      d="M112 160l144 112 144-112"
+    />
+  </svg>
+);

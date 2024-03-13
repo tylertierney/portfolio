@@ -2,6 +2,7 @@ import { PropsWithChildren } from "react";
 import { IProject } from "../../../projects";
 import "./SmallerProject.css";
 import { arrowIcon, githubIcon } from "../../../icons/icons";
+import LinkButton from "../../LinkButton/LinkButton";
 
 interface SmallerProjectProps {
   project: IProject;
@@ -16,7 +17,6 @@ export default function SmallerProject({
     <div
       className="smallerProject"
       style={{
-        // width: imageWidth + "px",
         boxShadow: `0px 0px 5px 1px color-mix(in srgb, ${project.color} 50%, var(--text))`,
       }}
     >
@@ -30,14 +30,14 @@ export default function SmallerProject({
         <span className="title">{project.title}</span>
         <p className="description">{project.description}</p>
         <div className="buttons">
-          <a className="button" href={project.github} target="_blank">
+          <LinkButton color="green" href={project.github} target="_blank">
             <span>Github</span>
             {githubIcon}
-          </a>
-          <a className="button" href={project.hostedSite} target="_blank">
+          </LinkButton>
+          <LinkButton color="blue" href={project.hostedSite} target="_blank">
             <span>Live Site</span>
             {arrowIcon}
-          </a>
+          </LinkButton>
         </div>
       </div>
     </div>
