@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { sunIcon, moonIcon, emailIcon, mailIcon } from "../../icons/icons";
+import { sunIcon, moonIcon, mailIcon } from "../../icons/icons";
 import { useEffect } from "react";
 
 const localStorageThemeLabel = "prefers-dark-theme";

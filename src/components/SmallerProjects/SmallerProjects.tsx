@@ -1,5 +1,5 @@
 import "./SmallerProjects.css";
-import { IProject, smallerProjects } from "../../projects";
+import { smallerProjects } from "../../projects";
 import SmallerProject from "./SmallerProject/SmallerProject";
 
 export default function SmallerProjects() {

@@ -2,12 +2,10 @@ import "./TechStackIcon.css";
 import {
   amazonS3Icon,
   angularIcon,
-  arrowIcon,
   auth0Icon,
   chakraIcon,
   emailIcon,
   firebaseIcon,
-  githubIcon,
   herokuIcon,
   mongoDbIcon,
   netlifyIcon,
