@@ -83,7 +83,7 @@ export default function Header() {
     {
       icon: resumeIcon,
       label: "Résumé",
-      href: "/public/TylerTierney_Resume.pdf",
+      href: "TylerTierney_Resume.pdf",
     },
   ];
 
