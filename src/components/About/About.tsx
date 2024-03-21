@@ -24,11 +24,7 @@ export default function About() {
           real estate. Nowadays, I spend my time writing code in order to create
           websites for clients in the financial industry.
         </p>
-        <LinkButton
-          color="blue"
-          href="/public/TylerTierney_Resume.pdf"
-          target="_blank"
-        >
+        <LinkButton color="blue" href="TylerTierneyResume.pdf" target="_blank">
           Get my résumé
         </LinkButton>
       </div>
