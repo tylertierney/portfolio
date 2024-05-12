@@ -16,7 +16,24 @@ import {
 } from "../../../../icons/icons";
 import { useState } from "react";
 
-const techStackIcons = new Map<string, { icon: JSX.Element; color: string }>([
+export type iconKey =
+  | "React"
+  | "Node JS"
+  | "Heroku"
+  | "Socket.IO"
+  | "Netlify"
+  | "Chakra UI"
+  | "Firebase"
+  | "Next.js"
+  | "MongoDB"
+  | "Auth0"
+  | "Angular"
+  | "Netlify Identity"
+  | "Amazon S3"
+  | "SendGrid"
+  | "Vite";
+
+const techStackIcons = new Map<iconKey, { icon: JSX.Element; color: string }>([
   ["React", { icon: reactIcon, color: "#61dafb" }],
   ["Node JS", { icon: nodeIcon, color: "#73aa63" }],
   ["Heroku", { icon: herokuIcon, color: "#79589f" }],
@@ -34,7 +51,7 @@ const techStackIcons = new Map<string, { icon: JSX.Element; color: string }>([
 ]);
 
 interface TechStackIconProps {
-  name: string;
+  name: iconKey;
 }
 
 export default function TechStackIcon({ name }: TechStackIconProps) {

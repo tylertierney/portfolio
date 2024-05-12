@@ -259,6 +259,20 @@ export default projects;
 
 export const smallerProjects = [
   {
+    title: "Movie Quiz",
+    description: "Guess the movie from its poster",
+    hostedSite: "https://movie-quiz-1.netlify.app/",
+    desktop_screenshot: "/images/screenshots/movie-quiz_desktop.png",
+    mobile_screenshot: "",
+    mobile_screenshot2: "",
+    mobile_screenshot3: "",
+    featuredImage: "",
+    local_url: "movie-quiz",
+    techStack: [],
+    color: "#7ce9d6",
+    github: "https://github.com/tylertierney/movie-quiz",
+  },
+  {
     title: "Minesweeper",
     description: "My recreation of the classic game!",
     hostedSite: "https://tylertierney.github.io/minesweeper",
