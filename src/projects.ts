@@ -1,3 +1,5 @@
+import { iconKey } from "./components/Projects/Project/TechStackIcon/TechStackIcon";
+
 export interface IProject {
   title: string;
   description: string;
@@ -9,7 +11,7 @@ export interface IProject {
   mobile_screenshot3: string;
   featuredImage: string;
   local_url: string;
-  techStack: Array<{ name: string; icon: string }>;
+  techStack: Array<{ name: iconKey; icon: string }>;
   color: string;
 }
 
