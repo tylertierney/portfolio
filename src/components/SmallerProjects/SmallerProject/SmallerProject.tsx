@@ -1,11 +1,11 @@
 import { PropsWithChildren } from "react";
-import { IProject } from "../../../projects";
+import { ISmallProject } from "../../../projects";
 import "./SmallerProject.css";
 import { arrowIcon, githubIcon } from "../../../icons/icons";
 import LinkButton from "../../LinkButton/LinkButton";
 
 interface SmallerProjectProps {
-  project: IProject;
+  project: ISmallProject;
 }
 
 export default function SmallerProject({
@@ -22,7 +22,7 @@ export default function SmallerProject({
     >
       <img
         className="img"
-        src={project.desktop_screenshot}
+        src={project.featuredImage}
         height={imageWidth * 0.75 + "px"}
         width="100%"
       />

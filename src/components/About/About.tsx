@@ -15,14 +15,22 @@ export default function About() {
           About me<span className="dot">.</span>
         </h1>
         <p className="body-paragraph">
-          My name is Tyler Tierney and I'm a frontend developer. I graduated
-          from the University of Florida in 2019.
+          My name is Tyler Tierney and I'm a frontend developer based in Tampa,
+          Fl. I graduated from the University of Florida in 2019.
         </p>
-        <p className="body-paragraph" style={{ marginBottom: "20px" }}>
+        <p className="body-paragraph">
           After graduation, I worked as an Account Executive in local
           advertising and then as a Revenue Operations Manager in commercial
-          real estate. Nowadays, I spend my time writing code in order to create
-          websites for clients in the financial industry.
+          real estate.
+        </p>
+        <p className="body-paragraph">
+          Nowadays, I spend my time writing code in order to create websites and
+          internal tools for clients in the financial industry.
+        </p>
+        <p className="body-paragraph" style={{ marginBottom: "20px" }}>
+          I'm a Typescript fanatic and I love using Angular on large projects -
+          with a heavy emphasis on RxJs. On personal projects, I use the
+          Vite/React stack along with Node.js and PostgreSQL when needed.
         </p>
         <LinkButton color="blue" href="TylerTierneyResume.pdf" target="_blank">
           Get my résumé
