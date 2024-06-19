@@ -249,7 +249,7 @@ export const smallerProjects: ISmallProject[] = [
   {
     title: "Snake",
     description: "A quick React game",
-    hostedSite: "https://github.com/tylertierney/snake",
+    hostedSite: "https://tylertierney.github.io/snake/",
     featuredImage: "/images/screenshots/snake_desktop.png",
     color: "#ff9f23",
     github: "https://github.com/tylertierney/snake",
