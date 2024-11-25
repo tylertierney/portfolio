@@ -223,6 +223,14 @@ export type ISmallProject = Omit<IProject, "techStack">;
 
 export const smallerProjects: ISmallProject[] = [
   {
+    title: "Connections",
+    description: "Identify categories from the given words",
+    hostedSite: "https://connections-1.netlify.app/",
+    featuredImage: "/images/screenshots/connections_desktop.png",
+    color: "#7ce9d6",
+    github: "https://github.com/tylertierney/connections",
+  },
+  {
     title: "Movie Quiz",
     description: "Guess the movie from its poster",
     hostedSite: "https://movie-quiz-1.netlify.app/",
