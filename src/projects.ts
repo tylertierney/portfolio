@@ -16,6 +16,23 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
+    title: 'Hot and Cold',
+    description: `Hot and Cold is a word guessing game. Each guess is evaluated using a language-learning model that maps words into a shared semantic space, allowing the game to measure how close a guess is to the target word based on meaning alone.`,
+    hostedSite: 'https://hot-and-cold-1.netlify.app',
+    github: `${githubUrl}/hot-and-cold`,
+    featuredImage: '/images/hot-and-cold_iphone_mockups.png',
+    techStack: [
+      {
+        name: 'React',
+      },
+      { name: 'Netlify' },
+      {
+        name: 'Hugging Face',
+      },
+    ],
+    color: '',
+  },
+  {
     title: 'Strings',
     description: `Strings is a clone of the popular New York Times game Strands. It's not your typical word search.`,
     hostedSite: 'https://strands-1.netlify.app',

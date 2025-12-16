@@ -8,6 +8,7 @@ import {
   firebaseIcon,
   githubActionsIcon,
   herokuIcon,
+  huggingFaceIcon,
   mongoDbIcon,
   netlifyIcon,
   nextJsIcon,
@@ -36,6 +37,7 @@ export type iconKey =
   | 'Vite'
   | 'Github Actions'
   | 'Storybook'
+  | 'Hugging Face'
 
 const techStackIcons = new Map<iconKey, { icon: JSX.Element; color: string }>([
   ['React', { icon: reactIcon, color: '#61dafb' }],
@@ -54,6 +56,7 @@ const techStackIcons = new Map<iconKey, { icon: JSX.Element; color: string }>([
   ['SendGrid', { icon: emailIcon, color: '#61dafb' }],
   ['Github Actions', { icon: githubActionsIcon, color: 'green' }],
   ['Storybook', { icon: storybookIcon, color: 'pink' }],
+  ['Hugging Face', { icon: huggingFaceIcon, color: '#FF9D0B' }],
 ])
 
 interface TechStackIconProps {
