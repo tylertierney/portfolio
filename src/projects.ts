@@ -16,6 +16,20 @@ export interface IProject {
 
 const projects: IProject[] = [
   {
+    title: 'Wordscapes',
+    description: `A clone of the popular mobile game Wordscapes. I got sick of seeing their ads, so I made my own version.`,
+    hostedSite: 'https://wordscapes-1.netlify.app',
+    github: `${githubUrl}/wordscapes`,
+    featuredImage: '/images/wordscapes_iphone_mockups.png',
+    techStack: [
+      {
+        name: 'React',
+      },
+      { name: 'Netlify' },
+    ],
+    color: '',
+  },
+  {
     title: 'Hot and Cold',
     description: `Hot and Cold is a word guessing game. Each guess is evaluated using a language-learning model that maps words into a shared semantic space, allowing the game to measure how close a guess is to the target word based on meaning alone.`,
     hostedSite: 'https://hot-and-cold-1.netlify.app',
