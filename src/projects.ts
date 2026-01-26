@@ -130,6 +130,19 @@ const projects: IProject[] = [
     color: '#ffaa7c',
   },
   {
+    title: 'Solitaire',
+    description: 'This one speaks for itself.',
+    hostedSite: 'https://solitaire-123.netlify.app',
+    github: `${githubUrl}/solitaire`,
+    featuredImage: '/images/solitaire_iphone_mockups.png',
+    techStack: [
+      {
+        name: 'React',
+      },
+    ],
+    color: '',
+  },
+  {
     title: 'Minesweeper',
     description: `My recreation of the classic game. Carefully uncover tiles while avoiding the bombs. Adjust the width and height of the grid, and the number of bombs.`,
     hostedSite: 'https://tylertierney.github.io/minesweeper/',
@@ -259,14 +272,5 @@ export const smallerProjects: ISmallProject[] = [
     featuredImage: '/images/screenshots/connectfour_desktop.png',
     color: '#88ce66',
     github: `${githubUrl}/connectfour`,
-  },
-  {
-    title: 'Battleship',
-    description:
-      'The classic board game, built with React and TypeScript. See if you can beat the computer!',
-    hostedSite: 'https://tylertierney.github.io/battleship/',
-    featuredImage: '/images/screenshots/battleship_desktop.png',
-    color: '#ff9982',
-    github: `${githubUrl}/battleship`,
   },
 ]
