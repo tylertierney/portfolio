@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Bitter";
+  font-family: 'Bitter';
 }
 
 body {
@@ -32,9 +32,7 @@ body.dark-theme {
   max-width: inherit;
   overflow-y: auto;
   position: relative;
-
 }
-
 
 header,
 section {
@@ -91,7 +89,7 @@ h1 {
 
 .sectionHeading::after {
   display: block;
-  content: "";
+  content: '';
   width: 100px;
   height: 10px;
   background-color: var(--accent);
@@ -167,4 +165,15 @@ section:last-of-type {
 
 .body-paragraph {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  section#about,
+  section#projects {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  /* .sectionHeading {
+    padding-left: 2rem;
+  } */
 }

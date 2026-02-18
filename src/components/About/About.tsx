@@ -1,12 +1,13 @@
-import LinkButton from "../LinkButton/LinkButton";
+import LinkButton from '../LinkButton/LinkButton'
+import './About.css'
 
 export default function About() {
   return (
     <section id="about" className="about">
       <div
         style={{
-          right: "-16.5rem",
-          top: "12.5rem",
+          right: '-16.5rem',
+          top: '12.5rem',
         }}
         className="blurred-blob accent"
       ></div>
@@ -27,7 +28,7 @@ export default function About() {
           Nowadays, I spend my time writing code in order to create websites and
           internal tools for clients in the financial industry.
         </p>
-        <p className="body-paragraph" style={{ marginBottom: "20px" }}>
+        <p className="body-paragraph" style={{ marginBottom: '20px' }}>
           I'm a Typescript fanatic and I love using Angular on large projects -
           with a heavy emphasis on RxJs. On personal projects, I use the
           Vite/React stack along with Node.js and PostgreSQL when needed.
@@ -37,5 +38,5 @@ export default function About() {
         </LinkButton>
       </div>
     </section>
-  );
+  )
 }

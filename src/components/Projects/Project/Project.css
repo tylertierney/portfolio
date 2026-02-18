@@ -31,7 +31,6 @@
       flex-wrap: wrap;
       gap: 1.5rem;
       margin-bottom: 1.5rem;
-
     }
 
     .buttons {
@@ -68,6 +67,14 @@
 
     .images {
       max-width: 26rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project {
+    .images {
+      max-width: 36rem;
     }
   }
 }
